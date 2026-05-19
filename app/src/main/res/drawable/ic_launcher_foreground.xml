@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Pan body -->
+    <path
+        android:fillColor="#D97757"
+        android:pathData="M30,52 L78,52 A4,4 0 0 1 82,56 L82,68 A14,14 0 0 1 68,82 L40,82 A14,14 0 0 1 26,68 L26,56 A4,4 0 0 1 30,52 Z" />
+    <!-- Pan handle -->
+    <path
+        android:fillColor="#D97757"
+        android:pathData="M82,58 L94,58 A4,4 0 0 1 98,62 L98,64 A4,4 0 0 1 94,68 L82,68 Z" />
+    <!-- Steam lines -->
+    <path
+        android:strokeColor="#D97757"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M42,28 C42,34 38,34 38,40 C38,46 42,46 42,48"
+        android:fillColor="#00000000" />
+    <path
+        android:strokeColor="#D97757"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M54,26 C54,32 50,32 50,38 C50,44 54,44 54,48"
+        android:fillColor="#00000000" />
+    <path
+        android:strokeColor="#D97757"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M66,28 C66,34 62,34 62,40 C62,46 66,46 66,48"
+        android:fillColor="#00000000" />
+</vector>

@@ -1,0 +1,315 @@
+{
+  "recepten": [
+    {
+      "id": "tikka-massala-curry",
+      "naam": "Tikka massala curry",
+      "categorie": "Kip",
+      "ingredienten": [
+        { "naam": "kipdijfilet", "hoeveelheid": 400, "eenheid": "g" },
+        { "naam": "aubergine", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "kokosmelk", "hoeveelheid": null, "eenheid": null },
+        { "naam": "rode paprika", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "normale ui", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "rode ui", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "grote teen knoflook", "hoeveelheid": 3, "eenheid": "stuk" },
+        { "naam": "gember", "hoeveelheid": null, "eenheid": null },
+        { "naam": "tomatenpuree", "hoeveelheid": null, "eenheid": null },
+        { "naam": "tomaat", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "koriander", "hoeveelheid": null, "eenheid": null },
+        { "naam": "basmati rijst", "hoeveelheid": 350, "eenheid": "g" }
+      ],
+      "bereidingswijze": [
+        "Bak de kip bruin op hoog vuur.",
+        "Voeg de ui, knoflook en gember toe en bak 1 à 2 minuten mee.",
+        "Voeg de groente toe en bak 4 minuten mee op hoog vuur.",
+        "Voeg de tomatenpuree toe en bak 1 minuut op middelhoog vuur.",
+        "Voeg de tomaten, kruidenpasta en kokosmelk toe. Breng aan de kook en roer de helft van de koriander erdoor.",
+        "Laat 10 à 15 minuten zachtjes pruttelen met de deksel op de pan.",
+        "Strooi vlak voor het serveren de rest van de koriander erover."
+      ]
+    },
+    {
+      "id": "pasta-bolognese",
+      "naam": "Pasta bolognese",
+      "categorie": "Pasta",
+      "ingredienten": [
+        { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "rode paprika", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "winterpeen", "hoeveelheid": null, "eenheid": null },
+        { "naam": "ui", "hoeveelheid": 3, "eenheid": "stuk" },
+        { "naam": "grote teen knoflook", "hoeveelheid": 3, "eenheid": "stuk" },
+        { "naam": "gehakt", "hoeveelheid": 500, "eenheid": "g" },
+        { "naam": "rode wijn", "hoeveelheid": null, "eenheid": null },
+        { "naam": "lekkere pastasaus", "hoeveelheid": null, "eenheid": null },
+        { "naam": "tomatenpuree", "hoeveelheid": null, "eenheid": null },
+        { "naam": "pasta", "hoeveelheid": 400, "eenheid": "g" }
+      ],
+      "bereidingswijze": [
+        "Snipper de ui. Schil de winterpeen en snijd in blokjes. Verhit de olie met de boter in een pan, voeg de ui, peen en bleekselderij toe en bak 5 min. op middelhoog vuur. Voeg de tomatenpuree en het gehakt toe en bak in 5 min. rul.",
+        "Voeg de bouillon en tomatenblokjes erdoor. Breng op smaak met peper en eventueel zout. Breng aan de kook en laat de saus met de deksel op de pan 30 min. op laag vuur sudderen. Roer af en toe."
+      ]
+    },
+    {
+      "id": "lasagne",
+      "naam": "Lasagne",
+      "categorie": "Pasta",
+      "ingredienten": [
+        { "naam": "paprika", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "gehakt", "hoeveelheid": 500, "eenheid": "g" },
+        { "naam": "winterpeen", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "ui", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "knoflook", "hoeveelheid": 2, "eenheid": "teen" },
+        { "naam": "bolognese saus", "hoeveelheid": null, "eenheid": null },
+        { "naam": "lasagnebladen", "hoeveelheid": 7, "eenheid": "stuk" },
+        { "naam": "Italiaanse kruiden", "hoeveelheid": null, "eenheid": null },
+        { "naam": "zout", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "200 graden 30 minuten in de oven."
+      ]
+    },
+    {
+      "id": "macaroni",
+      "naam": "Macaroni",
+      "categorie": "Pasta",
+      "ingredienten": [
+        { "naam": "gehakt", "hoeveelheid": null, "eenheid": null },
+        { "naam": "macaroni", "hoeveelheid": null, "eenheid": null },
+        { "naam": "tomatenblokjes", "hoeveelheid": null, "eenheid": null },
+        { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "rode paprika", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "winterpeen", "hoeveelheid": null, "eenheid": null },
+        { "naam": "ui", "hoeveelheid": null, "eenheid": null },
+        { "naam": "knoflook", "hoeveelheid": null, "eenheid": null },
+        { "naam": "tomatenpuree", "hoeveelheid": null, "eenheid": null },
+        { "naam": "olijfolie", "hoeveelheid": null, "eenheid": null },
+        { "naam": "tomatensaus", "hoeveelheid": null, "eenheid": null },
+        { "naam": "beef bouillon", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": []
+    },
+    {
+      "id": "pasta-pesto",
+      "naam": "Pasta pesto",
+      "categorie": "Pasta",
+      "ingredienten": [
+        { "naam": "pasta", "hoeveelheid": null, "eenheid": null },
+        { "naam": "pesto", "hoeveelheid": null, "eenheid": null },
+        { "naam": "kipfilet (in blokjes, 300 of 500 g)", "hoeveelheid": 500, "eenheid": "g" },
+        { "naam": "prei (1 of 2)", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "champignon", "hoeveelheid": null, "eenheid": null },
+        { "naam": "crème fraîche", "hoeveelheid": null, "eenheid": null },
+        { "naam": "zongedroogde tomaat", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": []
+    },
+    {
+      "id": "bami-met-mienestjes",
+      "naam": "Bami met mienestjes",
+      "categorie": "Aziatisch",
+      "ingredienten": [
+        { "naam": "mienestjes", "hoeveelheid": 300, "eenheid": "g" },
+        { "naam": "bamigroentepakket", "hoeveelheid": 900, "eenheid": "g" },
+        { "naam": "kip", "hoeveelheid": 350, "eenheid": "g" },
+        { "naam": "boemboe bami goreng (Conimex)", "hoeveelheid": 95, "eenheid": "g" },
+        { "naam": "water", "hoeveelheid": 50, "eenheid": "ml" },
+        { "naam": "ketjap", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": []
+    },
+    {
+      "id": "gnocchi",
+      "naam": "Gnocchi ovenschotel",
+      "categorie": "Ovenschotel",
+      "ingredienten": [
+        { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "aubergine", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "paprika", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "gnocchi", "hoeveelheid": 500, "eenheid": "g" },
+        { "naam": "rundergehakt", "hoeveelheid": 500, "eenheid": "g" },
+        { "naam": "groentebouillonblokje", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "tomatenpassata", "hoeveelheid": null, "eenheid": null },
+        { "naam": "Italiaanse kruiden", "hoeveelheid": null, "eenheid": null },
+        { "naam": "geraspte kaas", "hoeveelheid": null, "eenheid": null },
+        { "naam": "rode ui", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "suiker", "hoeveelheid": 1, "eenheid": "tl" }
+      ],
+      "bereidingswijze": []
+    },
+    {
+      "id": "broccoli-ovenschotel",
+      "naam": "Broccoli ovenschotel",
+      "categorie": "Ovenschotel",
+      "ingredienten": [
+        { "naam": "broccoli (roosjes)", "hoeveelheid": 500, "eenheid": "g" },
+        { "naam": "aardappelschijfjes", "hoeveelheid": 600, "eenheid": "g" },
+        { "naam": "ui (gesnipperd)", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "rundergehakt", "hoeveelheid": 300, "eenheid": "g" },
+        { "naam": "rode paprika", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "knoflookteen (geperst)", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "paprikapoeder", "hoeveelheid": 1, "eenheid": "tl" },
+        { "naam": "uienpoeder", "hoeveelheid": 1, "eenheid": "tl" },
+        { "naam": "ei", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "kookroom", "hoeveelheid": 250, "eenheid": "ml" },
+        { "naam": "groentebouillonblokje (verkruimeld)", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "belegen kaas (geraspt)", "hoeveelheid": 50, "eenheid": "g" }
+      ],
+      "bereidingswijze": [
+        "Verwarm de oven voor op 175 graden boven- en onderwarmte.",
+        "Kook de broccoli in ca. 5 minuten beetgaar en kook de aardappelschijfjes 10 minuten voor.",
+        "Bak de ui glazig in een ruime koekenpan met wat olie, voeg het gehakt toe. Bak het geheel samen en voeg de paprika in blokjes toe.",
+        "Voeg de knoflook toe samen met de paprikapoeder en uienpoeder, breng op smaak met peper en zout.",
+        "Voeg de broccoli toe en bak nog 5 minuten mee met het gehakt op laag vuur.",
+        "Lek de aardappelen goed uit, verdeel de helft van de aardappelen over de schaal, voeg dan de broccoli toe samen met het gehakt. Verdeel de 2e helft aardappels over de broccoli.",
+        "Meng het ei met de kookroom, cheddar, belegen kaas, verkruimelde blokje groentebouillon en naar smaak zout en peper. Meng dit goed door met een garde. Giet de room over de aardappelen. Garneer met de extra kaas.",
+        "Zet de ovenschaal 30-45 minuten in de oven en bak de ovenschotel gaar, goudbruin en tot de kaas is gesmolten. Garneer optioneel met verse peterselie."
+      ]
+    },
+    {
+      "id": "oer-leidse-hutspot",
+      "naam": "Echte Oer-Leidse Hutspot",
+      "categorie": "Stamppot",
+      "porties": "4-6 personen",
+      "ingredienten": [
+        { "naam": "pastinaak (schoongemaakt en in blokjes)", "hoeveelheid": 1200, "eenheid": "g" },
+        { "naam": "winterpeen (in blokjes)", "hoeveelheid": 600, "eenheid": "g" },
+        { "naam": "ui (grof gesnipperd)", "hoeveelheid": 700, "eenheid": "g" },
+        { "naam": "klapstuk (runderborst, riblappen of sukadevlees) of zoutvlees", "hoeveelheid": 1350, "eenheid": "g" },
+        { "naam": "laurierblaadje", "hoeveelheid": 3, "eenheid": "stuk" },
+        { "naam": "peperkorrel", "hoeveelheid": 8, "eenheid": "stuk" },
+        { "naam": "kruidnagel", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "zout (weinig als je zoutvlees gebruikt)", "hoeveelheid": null, "eenheid": null },
+        { "naam": "kruimige aardappelen (optioneel, voor smeuïgheid)", "hoeveelheid": 400, "eenheid": "g" }
+      ],
+      "bereidingswijze": [
+        "Leg het klapstuk in een ruime pan, zet helemaal onder koud water, breng langzaam aan de kook. Schuim af.",
+        "Voeg laurier, peperkorrels en kruidnagel toe. Laat 2,5-3 uur heel zachtjes trekken tot het vlees bijna uit elkaar valt. (Slowcooker mag ook op low.)",
+        "Haal het vlees eruit, zeef de bouillon en bewaar die.",
+        "Doe pastinaak, wortel en ui in de (schone) pan. Giet er zoveel van de bouillon bij tot alles nét onder staat.",
+        "Breng aan de kook, draai laag en laat ± 30-40 minuten zachtjes koken tot alles gaar is. (Geen aardappel = iets korter dan je gewend bent.)",
+        "Giet af maar bewaar een mok kookvocht. Stamp alles grof met een stamper (niet pureren, het mag best nog wat bite hebben). Maak aan met een scheutje kookvocht en een klein klontje roomboter of reuzel. Proef op zout en peper.",
+        "Leg het vlees terug op de hutspot of snijd het in plakken en leg erbovenop. Schep de jus er rijkelijk overheen.",
+        "Serveren met: mosterd op tafel, een scheutje azijn over de hutspot (ouderwetse gewoonte), roggebrood met roomboter erbij, een pul donker bier of gewoon karnemelk."
+      ]
+    },
+    {
+      "id": "spaanse-tomatenstoof-gehaktballetjes",
+      "naam": "Snelle Spaanse tomatenstoof met gehaktballetjes",
+      "categorie": "Stoofpot",
+      "porties": "4 personen",
+      "ingredienten": [
+        { "naam": "half-om-halfgehakt (mag ook rundergehakt zijn)", "hoeveelheid": 500, "eenheid": "g" },
+        { "naam": "Al-Andalus kruiden (Euroma)", "hoeveelheid": 4, "eenheid": "tl" },
+        { "naam": "middelgroot ei", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "traditionele olijfolie", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "teen knoflook", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "ui", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "rivolo-cherrytomaten", "hoeveelheid": 400, "eenheid": "g" },
+        { "naam": "polpa (tomaatstukjes)", "hoeveelheid": 425, "eenheid": "g" },
+        { "naam": "kikkererwten", "hoeveelheid": 800, "eenheid": "g" },
+        { "naam": "verse platte peterselie", "hoeveelheid": 10, "eenheid": "g" }
+      ],
+      "bereidingswijze": [
+        "Doe het gehakt met de helft van de Al-Andalus, het ei, wat peper en een mespunt zout in een kom. Kneed goed door elkaar en vorm er met vochtige handen 16 balletjes ter grootte van een walnoot van.",
+        "Verhit de olie in een koekenpan en bak de gehaktballetjes op middelhoog vuur in 8 min. rondom goudbruin en gaar. Neem uit de pan.",
+        "Maak ondertussen de knoflook en uien schoon. Snijd de knoflook fijn en snipper de ui. Was de cherrytomaten en halveer ze.",
+        "Fruit de knoflook, ui en de rest van de Al-Andalus 3 min. in het achtergebleven bakvet. Voeg de tomaten en polpa toe en breng aan de kook. Zet het vuur laag en stoof 5 min.",
+        "Doe ondertussen de kikkererwten in een bolzeef, spoel af onder koud stromend water en laat uitlekken. Voeg samen met de gehaktballetjes toe aan de tomaten en verwarm 2 min.",
+        "Breng op smaak met peper en eventueel zout. Snijd de peterselie fijn. Verdeel de stoof over diepe borden en bestrooi met de peterselie."
+      ]
+    },
+    {
+      "id": "orzo-met-garnalen",
+      "naam": "Orzo met garnalen",
+      "categorie": "Pasta",
+      "porties": "4 personen",
+      "ingredienten": [
+        { "naam": "kipfilet", "hoeveelheid": null, "eenheid": null },
+        { "naam": "ui", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "olijfolie", "hoeveelheid": null, "eenheid": null },
+        { "naam": "cajunkruiden", "hoeveelheid": null, "eenheid": null },
+        { "naam": "zout", "hoeveelheid": null, "eenheid": null },
+        { "naam": "bleekselderij", "hoeveelheid": null, "eenheid": null },
+        { "naam": "paprika", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "tomaat", "hoeveelheid": null, "eenheid": null },
+        { "naam": "orzo (riso)", "hoeveelheid": null, "eenheid": null },
+        { "naam": "heet water", "hoeveelheid": null, "eenheid": null },
+        { "naam": "bouillonblokje", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "garnalen", "hoeveelheid": null, "eenheid": null },
+        { "naam": "verse peterselie", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Snijd de kip in stukjes van ca. 1 cm en snipper de ui. Verhit de olie in de hapjespan en bak de kip, ui, cajunkruiden en zout 5 min. op middelhoog vuur.",
+        "Snijd ondertussen de bleekselderij in stukjes van ca. 1 cm. Halveer de paprika, verwijder de steelaanzet en zaadlijsten en snijd het vruchtvlees in stukjes van ca. 1 cm. Voeg de bleekselderij en paprika toe en bak 5 min. mee.",
+        "Snijd ondertussen de tomaten in stukjes. Voeg de tomaten, orzo en het hete water toe. Verkruimel het bouillonblokje erboven en breng aan de kook. Kook 10 min. op matig vuur. Roer regelmatig.",
+        "Voeg de garnalen toe en gaar nog 5 min. mee. Snijd ondertussen de peterselie fijn. Controleer of de pasta gaar is en roer de peterselie erdoor."
+      ]
+    },
+    {
+      "id": "quiche-prei-spek",
+      "naam": "Quiche met prei en spek",
+      "categorie": "Hartige taart",
+      "ingredienten": [
+        { "naam": "plakjes diepvries deeg voor hartige taart", "hoeveelheid": 7, "eenheid": "stuk" },
+        { "naam": "prei", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "magere spekreepjes", "hoeveelheid": 250, "eenheid": "g" },
+        { "naam": "middelgroot ei", "hoeveelheid": 3, "eenheid": "stuk" },
+        { "naam": "verse slagroom", "hoeveelheid": 250, "eenheid": "ml" },
+        { "naam": "geraspte belegen kaas", "hoeveelheid": 75, "eenheid": "g" }
+      ],
+      "bereidingswijze": [
+        "Verwarm de oven voor op 200 °C. Laat het deeg ontdooien. Vet de taartvorm in en bekleed met de plakjes deeg. Duw de naden van het deeg goed aan, zodat de bodem en randen helemaal bedekt zijn.",
+        "Was de prei goed en snijd in dunne ringen. Bak de spekreepjes in een droge koekenpan in 4-5 min. goudbruin. Laat de spekreepjes uitlekken op keukenpapier.",
+        "Bak de prei in het achtergebleven spekvet 5 min. al omscheppend op hoog vuur.",
+        "Klop in een kom de eieren met de slagroom los en meng er de kaas, spekjes, prei en wat peper door. Schenk het eimengsel in de taartvorm.",
+        "Bak de quiche in 25-30 min. gaar en goudbruin. Haal de quiche uit de oven en laat hem 5-10 min. staan voor je 'm aansnijdt."
+      ]
+    },
+    {
+      "id": "zuurkoolstamppot",
+      "naam": "Zuurkoolstamppot met rookworst",
+      "categorie": "Stamppot",
+      "ingredienten": [
+        { "naam": "zuurkool", "hoeveelheid": null, "eenheid": null },
+        { "naam": "kruimige aardappelen", "hoeveelheid": null, "eenheid": null },
+        { "naam": "melk", "hoeveelheid": null, "eenheid": null },
+        { "naam": "roomboter", "hoeveelheid": null, "eenheid": null },
+        { "naam": "mosterd", "hoeveelheid": null, "eenheid": null },
+        { "naam": "rookworst", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Laat de zuurkool uitlekken. Schil en snijd de aardappelen in gelijke stukken en kook in 20 min. gaar. Voeg de laatste 10 min. de zuurkool toe.",
+        "Giet de aardappelen en zuurkool af en bewaar een kopje kookvocht. Stamp de aardappelen en zuurkool grof. Voeg de melk, de helft van de boter en mosterd toe en meng door. Voeg wat van het kookvocht toe en roer tot een smeuïge stamppot. Breng op smaak met peper en eventueel zout.",
+        "Verwarm ondertussen de rookworst volgens de aanwijzingen op de verpakking.",
+        "Serveer de stamppot met de rookworst."
+      ]
+    },
+    {
+      "id": "gele-rijst-chorizo",
+      "naam": "Gele rijst met chorizo",
+      "categorie": "Rijst",
+      "porties": "4 personen",
+      "ingredienten": [
+        { "naam": "chorizo", "hoeveelheid": 250, "eenheid": "g" },
+        { "naam": "ui", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "olijfolie", "hoeveelheid": 1, "eenheid": "el" },
+        { "naam": "gele rijst", "hoeveelheid": 325, "eenheid": "g" },
+        { "naam": "water", "hoeveelheid": 750, "eenheid": "ml" },
+        { "naam": "kippenbouillontablet", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "tomaat", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "tuinerwten", "hoeveelheid": 300, "eenheid": "g" },
+        { "naam": "verse peterselie", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Verwijder het vel van de chorizo en snijd de worst in blokjes. Snipper de uien.",
+        "Verhit de olie in een hapjespan en bak de worst met de ui tot deze glazig is. Schep de rijst erdoor en bak 1 min. mee.",
+        "Voeg het water toe, verkruimel het bouillontablet erboven en breng aan de kook. Draai het vuur laag en kook de rijst 10 min. met de deksel op de pan.",
+        "Snijd ondertussen de tomaten in kwarten en verwijder de zaadlijsten. Snijd het vruchtvlees in blokjes. Schep de tomaat en erwten door de rijst en kook nog 5 min. De rijst moet alle bouillon hebben opgenomen.",
+        "Breng op smaak met peper en eventueel zout. Zet het vuur uit en laat de rijst een paar min. afgedekt staan.",
+        "Snijd ondertussen de peterselie fijn. Bestrooi het rijstmengsel met de peterselie en serveer direct."
+      ]
+    }
+  ]
+}
