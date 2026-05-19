@@ -12,7 +12,3 @@ captures/
 output.json
 .kotlin/
 
-# Lokale werkbestanden — niet pushen
-Claude code prompt.md
-Recepten seed.json
-
