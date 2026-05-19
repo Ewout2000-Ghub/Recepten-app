@@ -4,31 +4,27 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- Pan body -->
+    <!-- Kom -->
     <path
         android:fillColor="#D97757"
-        android:pathData="M30,52 L78,52 A4,4 0 0 1 82,56 L82,68 A14,14 0 0 1 68,82 L40,82 A14,14 0 0 1 26,68 L26,56 A4,4 0 0 1 30,52 Z" />
-    <!-- Pan handle -->
-    <path
-        android:fillColor="#D97757"
-        android:pathData="M82,58 L94,58 A4,4 0 0 1 98,62 L98,64 A4,4 0 0 1 94,68 L82,68 Z" />
-    <!-- Steam lines -->
+        android:pathData="M28,54 L80,54 A4,4 0 0 1 84,58 L84,68 A16,16 0 0 1 68,84 L40,84 A16,16 0 0 1 24,68 L24,58 A4,4 0 0 1 28,54 Z" />
+    <!-- Warmtekrullen -->
     <path
         android:strokeColor="#D97757"
-        android:strokeWidth="3"
+        android:strokeWidth="3.5"
         android:strokeLineCap="round"
-        android:pathData="M42,28 C42,34 38,34 38,40 C38,46 42,46 42,48"
+        android:pathData="M42,26 C42,32 38,34 38,40 C38,46 42,46 42,50"
         android:fillColor="#00000000" />
     <path
         android:strokeColor="#D97757"
-        android:strokeWidth="3"
+        android:strokeWidth="3.5"
         android:strokeLineCap="round"
-        android:pathData="M54,26 C54,32 50,32 50,38 C50,44 54,44 54,48"
+        android:pathData="M54,22 C54,28 50,30 50,36 C50,42 54,44 54,48"
         android:fillColor="#00000000" />
     <path
         android:strokeColor="#D97757"
-        android:strokeWidth="3"
+        android:strokeWidth="3.5"
         android:strokeLineCap="round"
-        android:pathData="M66,28 C66,34 62,34 62,40 C62,46 66,46 66,48"
+        android:pathData="M66,26 C66,32 62,34 62,40 C62,46 66,46 66,50"
         android:fillColor="#00000000" />
 </vector>
