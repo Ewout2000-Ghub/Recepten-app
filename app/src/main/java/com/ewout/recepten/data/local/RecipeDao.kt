@@ -17,6 +17,17 @@ interface RecipeDao {
     @Query("SELECT * FROM recipes WHERE id = :id LIMIT 1")
     fun observeById(id: String): Flow<RecipeEntity?>
 
+    /**
+     * Alle versies van één gerecht: het anker (waarvan id = groepSleutel) plus
+     * elke versie die naar die sleutel verwijst. Gesorteerd zodat het anker
+     * (groepId is null) vooraan staat, daarna op naam.
+     */
+    @Query(
+        "SELECT * FROM recipes WHERE id = :groepSleutel OR groepId = :groepSleutel " +
+            "ORDER BY (groepId IS NOT NULL AND id <> groepId), naam COLLATE NOCASE ASC, id ASC"
+    )
+    fun observeGroup(groepSleutel: String): Flow<List<RecipeEntity>>
+
     @Query("SELECT * FROM recipes WHERE id = :id LIMIT 1")
     suspend fun getById(id: String): RecipeEntity?
 

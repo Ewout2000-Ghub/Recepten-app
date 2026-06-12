@@ -63,7 +63,14 @@ class RecipeListViewModel(
             matchesCategory && matchesQuery
         }
 
-        val items = filtered.map { recipe ->
+        // Toon per gerecht één kaart: versies delen een groepsleutel. Kies bij
+        // voorkeur de anker-versie (id == groepSleutel), anders de eerste.
+        val deduped = filtered
+            .groupBy { it.groepSleutel }
+            .values
+            .map { versies -> versies.firstOrNull { it.id == it.groepSleutel } ?: versies.first() }
+
+        val items = deduped.map { recipe ->
             val match = if (trimmed.isEmpty()) null else {
                 recipe.ingredienten.firstOrNull { it.naam.contains(trimmed, ignoreCase = true) }?.naam
             }

@@ -4,6 +4,8 @@ package com.ewout.recepten.ui.detail
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -144,6 +146,7 @@ fun RecipeDetailScreen(
                 }
                 else -> DetailContent(
                     state = state,
+                    onSelectVersie = viewModel::selecteerVersie,
                     onWijzigPersonen = viewModel::wijzigPersonen,
                     onToggleIngredient = viewModel::toggleIngredient,
                     onToggleStap = viewModel::toggleStap
@@ -184,6 +187,7 @@ fun RecipeDetailScreen(
 @Composable
 private fun DetailContent(
     state: RecipeDetailUiState,
+    onSelectVersie: (String) -> Unit,
     onWijzigPersonen: (Int) -> Unit,
     onToggleIngredient: (Int) -> Unit,
     onToggleStap: (Int) -> Unit
@@ -197,6 +201,9 @@ private fun DetailContent(
         item {
             HeaderCard(
                 recipe = recipe,
+                versies = state.versies,
+                geselecteerdeVersieId = state.geselecteerdeVersieId,
+                onSelectVersie = onSelectVersie,
                 personen = state.personen,
                 basisPersonen = state.basisPersonen,
                 onWijzigPersonen = onWijzigPersonen
@@ -236,6 +243,9 @@ private fun DetailContent(
 @Composable
 private fun HeaderCard(
     recipe: Recipe,
+    versies: List<VersieOptie>,
+    geselecteerdeVersieId: String?,
+    onSelectVersie: (String) -> Unit,
     personen: Int,
     basisPersonen: Int,
     onWijzigPersonen: (Int) -> Unit
@@ -256,12 +266,59 @@ private fun HeaderCard(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 CategorieChip(recipe.categorie)
             }
+            if (versies.size > 1) {
+                Spacer(Modifier.height(14.dp))
+                VersieSwitcher(
+                    versies = versies,
+                    geselecteerdeId = geselecteerdeVersieId,
+                    onSelect = onSelectVersie
+                )
+            }
             Spacer(Modifier.height(14.dp))
             PersonenStepper(
                 personen = personen,
                 basisPersonen = basisPersonen,
                 onWijzig = onWijzigPersonen
             )
+        }
+    }
+}
+
+@Composable
+private fun VersieSwitcher(
+    versies: List<VersieOptie>,
+    geselecteerdeId: String?,
+    onSelect: (String) -> Unit
+) {
+    Column {
+        Text(
+            text = "Versie",
+            style = MaterialTheme.typography.bodyMedium,
+            color = TextSecondary
+        )
+        Spacer(Modifier.height(6.dp))
+        Row(
+            modifier = Modifier.horizontalScroll(rememberScrollState()),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            versies.forEach { versie ->
+                val geselecteerd = versie.id == geselecteerdeId
+                Surface(
+                    shape = RoundedCornerShape(50),
+                    color = if (geselecteerd) BrandOrange else BrandSurfaceMuted,
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(50))
+                        .clickable { onSelect(versie.id) }
+                ) {
+                    Text(
+                        text = versie.label,
+                        style = MaterialTheme.typography.labelLarge,
+                        color = if (geselecteerd) BrandSurface else TextPrimary,
+                        fontWeight = if (geselecteerd) FontWeight.SemiBold else FontWeight.Normal,
+                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp)
+                    )
+                }
+            }
         }
     }
 }

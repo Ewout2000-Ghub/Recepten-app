@@ -34,6 +34,8 @@
       "naam": "Pasta bolognese",
       "categorie": "Pasta",
       "porties": "4 personen",
+      "groepId": "pasta-bolognese",
+      "versieNaam": "Origineel",
       "ingredienten": [
         { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
         { "naam": "rode paprika", "hoeveelheid": 2, "eenheid": "stuk" },
@@ -49,6 +51,38 @@
       "bereidingswijze": [
         "Snipper de ui. Schil de winterpeen en snijd in blokjes. Verhit de olie met de boter in een pan, voeg de ui, peen en bleekselderij toe en bak 5 min. op middelhoog vuur. Voeg de tomatenpuree en het gehakt toe en bak in 5 min. rul.",
         "Voeg de bouillon en tomatenblokjes erdoor. Breng op smaak met peper en eventueel zout. Breng aan de kook en laat de saus met de deksel op de pan 30 min. op laag vuur sudderen. Roer af en toe."
+      ]
+    },
+    {
+      "id": "pasta-bolognese-verse-groenten",
+      "naam": "Pasta bolognese",
+      "categorie": "Pasta",
+      "porties": "4 personen",
+      "groepId": "pasta-bolognese",
+      "versieNaam": "Verse groenten & wijn",
+      "ingredienten": [
+        { "naam": "rundergehakt", "hoeveelheid": 500, "eenheid": "g" },
+        { "naam": "paprika", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "winterpeen", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "bleekselderij", "hoeveelheid": 3, "eenheid": "stengel" },
+        { "naam": "ui", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "knoflook", "hoeveelheid": 3, "eenheid": "teen" },
+        { "naam": "Italiaanse kruiden", "hoeveelheid": null, "eenheid": null },
+        { "naam": "rode wijn", "hoeveelheid": null, "eenheid": null },
+        { "naam": "tomatensaus", "hoeveelheid": null, "eenheid": null },
+        { "naam": "tomatenpuree", "hoeveelheid": null, "eenheid": null },
+        { "naam": "pasta", "hoeveelheid": 400, "eenheid": "g" }
+      ],
+      "bereidingswijze": [
+        "Snipper de paprika, courgette, winterpeen, bleekselderij, uien en knoflook fijn.",
+        "Verhit wat olie in een ruime pan en bak de ui, knoflook en winterpeen op middellaag vuur kort aan tot de ui glazig is.",
+        "Voeg de paprika, courgette en bleekselderij toe en bak ze op hoog vuur kort mee.",
+        "Schep het rundergehakt erbij en bak het op hoog vuur rul.",
+        "Roer de tomatenpuree erdoor en bak deze 1 minuut mee.",
+        "Voeg de tomatensaus en een scheut rode wijn toe en breng op smaak met peper, zout en Italiaanse kruiden.",
+        "Laat de saus 30 minuten zachtjes sudderen en schep af en toe om.",
+        "Kook de laatste 11 minuten de pasta beetgaar, giet af en serveer met de saus."
       ]
     },
     {
