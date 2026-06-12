@@ -8,9 +8,22 @@ Studio op een Samsung Galaxy S24+.
 
 - Kotlin + Jetpack Compose (Material 3)
 - Min SDK 28, Target SDK 35
+- AGP 9 / Gradle 9.1 / Kotlin 2.2 / Room 2.8
 - Room (SQLite) voor persistentie, kotlinx.serialization voor JSON
 - MVVM met manual DI via `AppContainer` op Application-niveau
 - Navigation Compose (één Activity)
+- Alleen staande modus (portrait); op de detailpagina blijft het scherm aan
+
+## Functies op de detailpagina
+
+- **Porties schalen** — met de +/− stepper pas je het aantal personen aan;
+  alle hoeveelheden schalen mee. De basis is het eerste getal in het
+  `porties`-veld (standaard 4 als het veld ontbreekt).
+- **Afvinken tijdens het koken** — tik op een ingrediënt of stap om hem af te
+  strepen. Vinkjes resetten zodra je het recept verlaat.
+
+Zoeken op het lijstscherm matcht zowel de receptnaam als ingrediëntnamen
+(case-insensitive, substring).
 
 ## Builden en installeren via Android Studio
 
@@ -58,7 +71,7 @@ JSON-formaat per recept:
   "id": "broccoli-ovenschotel",
   "naam": "Broccoli ovenschotel",
   "categorie": "Ovenschotel",
-  "porties": null,
+  "porties": "4 personen",
   "ingredienten": [
     { "naam": "broccoli (roosjes)", "hoeveelheid": 500, "eenheid": "g" },
     { "naam": "ui (gesnipperd)", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -76,7 +89,9 @@ Regels:
   de naam.
 - `eenheid` is **vrije tekst** — niet beperkt tot een enum. Veelgebruikte
   waarden: `g`, `kg`, `ml`, `l`, `stuk`, `teen`, `el`, `tl`.
-- `porties` is optioneel.
+- `porties` is optioneel; gebruik standaard `"4 personen"`. Het eerste getal
+  erin is de basis voor het schalen van hoeveelheden op de detailpagina
+  (ontbreekt het veld, dan geldt 4).
 
 ### Toevoegen, bewerken en verwijderen via de UI
 

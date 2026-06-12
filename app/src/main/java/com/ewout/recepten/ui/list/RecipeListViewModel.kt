@@ -57,9 +57,9 @@ class RecipeListViewModel(
         val trimmed = q.trim()
         val filtered = recipeList.filter { recipe ->
             val matchesCategory = cats.isEmpty() || recipe.categorie in cats
-            val matchesQuery = trimmed.isEmpty() || recipe.ingredienten.any {
-                it.naam.contains(trimmed, ignoreCase = true)
-            }
+            val matchesQuery = trimmed.isEmpty() ||
+                recipe.naam.contains(trimmed, ignoreCase = true) ||
+                recipe.ingredienten.any { it.naam.contains(trimmed, ignoreCase = true) }
             matchesCategory && matchesQuery
         }
 

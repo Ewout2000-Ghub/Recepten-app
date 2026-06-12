@@ -75,7 +75,7 @@ fun RecipeEditScreen(
     }
 
     LaunchedEffect(state.foutmelding) {
-        state.foutmelding?.let { snackbar.showSnackbar(it) }
+        state.foutmelding?.let { snackbar.showSnackbar(it.tekst) }
     }
 
     Scaffold(
@@ -208,7 +208,7 @@ private fun EditForm(state: RecipeEditUiState, viewModel: RecipeEditViewModel) {
             SectionTitle("Ingrediënten")
         }
 
-        itemsIndexed(state.ingredienten, key = { idx, _ -> "ing-$idx" }) { index, draft ->
+        itemsIndexed(state.ingredienten, key = { _, draft -> "ing-${draft.key}" }) { index, draft ->
             FormCard {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
@@ -269,7 +269,7 @@ private fun EditForm(state: RecipeEditUiState, viewModel: RecipeEditViewModel) {
             SectionTitle("Bereidingswijze")
         }
 
-        itemsIndexed(state.stappen, key = { idx, _ -> "step-$idx" }) { index, step ->
+        itemsIndexed(state.stappen, key = { _, stap -> "step-${stap.key}" }) { index, stap ->
             FormCard {
                 Row(verticalAlignment = Alignment.Top) {
                     Text(
@@ -282,7 +282,7 @@ private fun EditForm(state: RecipeEditUiState, viewModel: RecipeEditViewModel) {
                     )
                     Spacer(Modifier.width(4.dp))
                     OutlinedTextField(
-                        value = step,
+                        value = stap.tekst,
                         onValueChange = { viewModel.onStapChange(index, it) },
                         placeholder = { Text("Stap omschrijven") },
                         modifier = Modifier.weight(1f),

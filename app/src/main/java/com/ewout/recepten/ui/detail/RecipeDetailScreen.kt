@@ -3,6 +3,7 @@
 package com.ewout.recepten.ui.detail
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,14 +17,16 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Remove
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -38,6 +41,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -46,7 +50,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.ewout.recepten.data.Ingredient
@@ -71,6 +77,13 @@ fun RecipeDetailScreen(
 
     LaunchedEffect(state.isDeleted) {
         if (state.isDeleted) onDeleted()
+    }
+
+    // Houd het scherm aan tijdens het koken.
+    val view = LocalView.current
+    DisposableEffect(view) {
+        view.keepScreenOn = true
+        onDispose { view.keepScreenOn = false }
     }
 
     Scaffold(
@@ -129,7 +142,12 @@ fun RecipeDetailScreen(
                         style = MaterialTheme.typography.bodyLarge
                     )
                 }
-                else -> DetailContent(state.recipe!!)
+                else -> DetailContent(
+                    state = state,
+                    onWijzigPersonen = viewModel::wijzigPersonen,
+                    onToggleIngredient = viewModel::toggleIngredient,
+                    onToggleStap = viewModel::toggleStap
+                )
             }
         }
     }
@@ -164,20 +182,36 @@ fun RecipeDetailScreen(
 }
 
 @Composable
-private fun DetailContent(recipe: Recipe) {
+private fun DetailContent(
+    state: RecipeDetailUiState,
+    onWijzigPersonen: (Int) -> Unit,
+    onToggleIngredient: (Int) -> Unit,
+    onToggleStap: (Int) -> Unit
+) {
+    val recipe = state.recipe ?: return
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         item {
-            HeaderCard(recipe)
+            HeaderCard(
+                recipe = recipe,
+                personen = state.personen,
+                basisPersonen = state.basisPersonen,
+                onWijzigPersonen = onWijzigPersonen
+            )
         }
         item {
             SectionTitle("Ingrediënten")
         }
-        items(recipe.ingredienten) { ingredient ->
-            IngredientRow(ingredient)
+        itemsIndexed(recipe.ingredienten) { index, ingredient ->
+            IngredientRow(
+                ingredient = ingredient,
+                factor = state.schaalFactor,
+                checked = index in state.afgevinkteIngredienten,
+                onToggle = { onToggleIngredient(index) }
+            )
         }
         item {
             Spacer(Modifier.height(4.dp))
@@ -187,7 +221,12 @@ private fun DetailContent(recipe: Recipe) {
             item { EmptyStepsState() }
         } else {
             itemsIndexed(recipe.bereidingswijze) { index, step ->
-                StepRow(index + 1, step)
+                StepRow(
+                    number = index + 1,
+                    text = step,
+                    checked = index in state.afgevinkteStappen,
+                    onToggle = { onToggleStap(index) }
+                )
             }
         }
         item { Spacer(Modifier.height(24.dp)) }
@@ -195,7 +234,12 @@ private fun DetailContent(recipe: Recipe) {
 }
 
 @Composable
-private fun HeaderCard(recipe: Recipe) {
+private fun HeaderCard(
+    recipe: Recipe,
+    personen: Int,
+    basisPersonen: Int,
+    onWijzigPersonen: (Int) -> Unit
+) {
     Card(
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = BrandSurface),
@@ -211,16 +255,80 @@ private fun HeaderCard(recipe: Recipe) {
             Spacer(Modifier.height(10.dp))
             Row(verticalAlignment = Alignment.CenterVertically) {
                 CategorieChip(recipe.categorie)
-                if (!recipe.porties.isNullOrBlank()) {
-                    Spacer(Modifier.width(10.dp))
-                    Text(
-                        text = recipe.porties,
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = TextSecondary
-                    )
-                }
+            }
+            Spacer(Modifier.height(14.dp))
+            PersonenStepper(
+                personen = personen,
+                basisPersonen = basisPersonen,
+                onWijzig = onWijzigPersonen
+            )
+        }
+    }
+}
+
+@Composable
+private fun PersonenStepper(
+    personen: Int,
+    basisPersonen: Int,
+    onWijzig: (Int) -> Unit
+) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = "Personen",
+                style = MaterialTheme.typography.bodyMedium,
+                color = TextSecondary
+            )
+            if (personen != basisPersonen) {
+                Text(
+                    text = "Hoeveelheden geschaald van $basisPersonen",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = BrandOrange
+                )
             }
         }
+        StepperKnop(
+            icon = Icons.Default.Remove,
+            contentDescription = "Minder personen",
+            enabled = personen > 1,
+            onClick = { onWijzig(-1) }
+        )
+        Text(
+            text = personen.toString(),
+            style = MaterialTheme.typography.titleMedium,
+            color = TextPrimary,
+            modifier = Modifier.padding(horizontal = 16.dp)
+        )
+        StepperKnop(
+            icon = Icons.Default.Add,
+            contentDescription = "Meer personen",
+            enabled = personen < 20,
+            onClick = { onWijzig(1) }
+        )
+    }
+}
+
+@Composable
+private fun StepperKnop(
+    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    contentDescription: String,
+    enabled: Boolean,
+    onClick: () -> Unit
+) {
+    IconButton(
+        onClick = onClick,
+        enabled = enabled,
+        modifier = Modifier
+            .size(36.dp)
+            .clip(CircleShape)
+            .background(if (enabled) BrandOrange else BrandSurfaceMuted)
+    ) {
+        Icon(
+            imageVector = icon,
+            contentDescription = contentDescription,
+            tint = if (enabled) BrandSurface else TextSecondary,
+            modifier = Modifier.size(20.dp)
+        )
     }
 }
 
@@ -236,23 +344,43 @@ private fun SectionTitle(text: String) {
 }
 
 @Composable
-private fun IngredientRow(ingredient: Ingredient) {
-    val hoeveelheid = formatHoeveelheid(ingredient)
+private fun IngredientRow(
+    ingredient: Ingredient,
+    factor: Double,
+    checked: Boolean,
+    onToggle: () -> Unit
+) {
+    val hoeveelheid = formatHoeveelheid(ingredient, factor)
+    val tekstKleur = if (checked) TextSecondary else TextPrimary
+    val doorhalen = if (checked) TextDecoration.LineThrough else TextDecoration.None
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .clip(RoundedCornerShape(8.dp))
+            .clickable(onClick = onToggle)
             .padding(vertical = 4.dp),
         verticalAlignment = Alignment.Top
     ) {
-        Text(
-            text = "•",
-            color = BrandOrange,
-            style = MaterialTheme.typography.bodyLarge,
-            modifier = Modifier.padding(end = 10.dp)
-        )
+        Box(modifier = Modifier.width(22.dp), contentAlignment = Alignment.CenterStart) {
+            if (checked) {
+                Icon(
+                    imageVector = Icons.Default.Check,
+                    contentDescription = null,
+                    tint = BrandOrange,
+                    modifier = Modifier.size(18.dp)
+                )
+            } else {
+                Text(
+                    text = "•",
+                    color = BrandOrange,
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+        }
         Text(
             text = ingredient.naam,
-            color = TextPrimary,
+            color = tekstKleur,
+            textDecoration = doorhalen,
             style = MaterialTheme.typography.bodyLarge,
             modifier = Modifier.weight(1f)
         )
@@ -260,6 +388,7 @@ private fun IngredientRow(ingredient: Ingredient) {
             Text(
                 text = hoeveelheid,
                 color = TextSecondary,
+                textDecoration = doorhalen,
                 style = MaterialTheme.typography.bodyLarge
             )
         }
@@ -267,10 +396,17 @@ private fun IngredientRow(ingredient: Ingredient) {
 }
 
 @Composable
-private fun StepRow(number: Int, text: String) {
+private fun StepRow(
+    number: Int,
+    text: String,
+    checked: Boolean,
+    onToggle: () -> Unit
+) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .clip(RoundedCornerShape(8.dp))
+            .clickable(onClick = onToggle)
             .padding(vertical = 6.dp),
         verticalAlignment = Alignment.Top
     ) {
@@ -278,20 +414,29 @@ private fun StepRow(number: Int, text: String) {
             modifier = Modifier
                 .size(28.dp)
                 .clip(CircleShape)
-                .background(BrandOrange),
+                .background(if (checked) BrandSurfaceMuted else BrandOrange),
             contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = number.toString(),
-                color = BrandSurface,
-                style = MaterialTheme.typography.labelLarge,
-                fontWeight = FontWeight.SemiBold
-            )
+            if (checked) {
+                Icon(
+                    imageVector = Icons.Default.Check,
+                    contentDescription = null,
+                    tint = TextSecondary,
+                    modifier = Modifier.size(16.dp)
+                )
+            } else {
+                Text(
+                    text = number.toString(),
+                    color = BrandSurface,
+                    style = MaterialTheme.typography.labelLarge,
+                    fontWeight = FontWeight.SemiBold
+                )
+            }
         }
         Spacer(Modifier.width(12.dp))
         Text(
             text = text,
-            color = TextPrimary,
+            color = if (checked) TextSecondary else TextPrimary,
             style = MaterialTheme.typography.bodyLarge,
             modifier = Modifier.weight(1f)
         )

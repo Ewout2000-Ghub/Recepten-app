@@ -11,6 +11,9 @@ class RecipeRepository(private val dao: RecipeDao) {
     fun observeAll(): Flow<List<Recipe>> =
         dao.observeAll().map { list -> list.map { it.toDomain() } }
 
+    fun observeById(id: String): Flow<Recipe?> =
+        dao.observeById(id).map { it?.toDomain() }
+
     suspend fun getById(id: String): Recipe? = dao.getById(id)?.toDomain()
 
     suspend fun upsert(recipe: Recipe) {

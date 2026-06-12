@@ -118,10 +118,8 @@ private fun ReceptenNavGraph() {
             RecipeEditScreen(
                 viewModel = vm,
                 onBack = { navController.popBackStack() },
-                onSaved = { id ->
-                    navController.popBackStack(Routes.detail(id), inclusive = true)
-                    navController.navigate(Routes.detail(id))
-                }
+                // Detail observeert de database, dus terugkeren volstaat.
+                onSaved = { _ -> navController.popBackStack() }
             )
         }
     }

@@ -4,6 +4,7 @@
       "id": "tikka-massala-curry",
       "naam": "Tikka massala curry",
       "categorie": "Kip",
+      "porties": "4 personen",
       "ingredienten": [
         { "naam": "kipdijfilet", "hoeveelheid": 400, "eenheid": "g" },
         { "naam": "aubergine", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -32,6 +33,7 @@
       "id": "pasta-bolognese",
       "naam": "Pasta bolognese",
       "categorie": "Pasta",
+      "porties": "4 personen",
       "ingredienten": [
         { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
         { "naam": "rode paprika", "hoeveelheid": 2, "eenheid": "stuk" },
@@ -53,6 +55,7 @@
       "id": "lasagne",
       "naam": "Lasagne",
       "categorie": "Pasta",
+      "porties": "4 personen",
       "ingredienten": [
         { "naam": "paprika", "hoeveelheid": 2, "eenheid": "stuk" },
         { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -73,6 +76,7 @@
       "id": "macaroni",
       "naam": "Macaroni",
       "categorie": "Pasta",
+      "porties": "4 personen",
       "ingredienten": [
         { "naam": "gehakt", "hoeveelheid": null, "eenheid": null },
         { "naam": "macaroni", "hoeveelheid": null, "eenheid": null },
@@ -93,6 +97,7 @@
       "id": "pasta-pesto",
       "naam": "Pasta pesto",
       "categorie": "Pasta",
+      "porties": "4 personen",
       "ingredienten": [
         { "naam": "pasta", "hoeveelheid": null, "eenheid": null },
         { "naam": "pesto", "hoeveelheid": null, "eenheid": null },
@@ -109,6 +114,7 @@
       "id": "bami-met-mienestjes",
       "naam": "Bami met mienestjes",
       "categorie": "Aziatisch",
+      "porties": "4 personen",
       "ingredienten": [
         { "naam": "mienestjes", "hoeveelheid": 300, "eenheid": "g" },
         { "naam": "bamigroentepakket", "hoeveelheid": 900, "eenheid": "g" },
@@ -123,6 +129,7 @@
       "id": "gnocchi",
       "naam": "Gnocchi ovenschotel",
       "categorie": "Ovenschotel",
+      "porties": "4 personen",
       "ingredienten": [
         { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
         { "naam": "aubergine", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -142,6 +149,7 @@
       "id": "broccoli-ovenschotel",
       "naam": "Broccoli ovenschotel",
       "categorie": "Ovenschotel",
+      "porties": "4 personen",
       "ingredienten": [
         { "naam": "broccoli (roosjes)", "hoeveelheid": 500, "eenheid": "g" },
         { "naam": "aardappelschijfjes", "hoeveelheid": 600, "eenheid": "g" },
@@ -251,6 +259,7 @@
       "id": "quiche-prei-spek",
       "naam": "Quiche met prei en spek",
       "categorie": "Hartige taart",
+      "porties": "4 personen",
       "ingredienten": [
         { "naam": "plakjes diepvries deeg voor hartige taart", "hoeveelheid": 7, "eenheid": "stuk" },
         { "naam": "prei", "hoeveelheid": 2, "eenheid": "stuk" },
@@ -271,6 +280,7 @@
       "id": "zuurkoolstamppot",
       "naam": "Zuurkoolstamppot met rookworst",
       "categorie": "Stamppot",
+      "porties": "4 personen",
       "ingredienten": [
         { "naam": "zuurkool", "hoeveelheid": null, "eenheid": null },
         { "naam": "kruimige aardappelen", "hoeveelheid": null, "eenheid": null },

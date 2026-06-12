@@ -124,7 +124,9 @@ fun RecipeListScreen(
 
                 when {
                     state.isLoading -> LoadingState()
-                    state.groups.isEmpty() -> EmptyState(query = state.query)
+                    state.groups.isEmpty() -> EmptyState(
+                        heeftFilter = state.query.isNotBlank() || state.selectedCategories.isNotEmpty()
+                    )
                     else -> RecipeGroups(
                         state = state,
                         onToggleCollapsed = viewModel::toggleCollapsed,
@@ -145,7 +147,7 @@ private fun SearchBar(
     OutlinedTextField(
         value = query,
         onValueChange = onQueryChange,
-        placeholder = { Text("Zoek op ingrediënt") },
+        placeholder = { Text("Zoek op naam of ingrediënt") },
         leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
         trailingIcon = {
             if (query.isNotEmpty()) {
@@ -237,10 +239,10 @@ private fun LoadingState() {
 }
 
 @Composable
-private fun EmptyState(query: String) {
+private fun EmptyState(heeftFilter: Boolean) {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Text(
-            text = if (query.isBlank()) "Nog geen recepten" else "Geen recepten gevonden",
+            text = if (heeftFilter) "Geen recepten gevonden" else "Nog geen recepten",
             color = TextSecondary,
             style = MaterialTheme.typography.bodyLarge
         )

@@ -12,17 +12,35 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import java.util.Locale
 
 /**
  * Eén regel in het ingrediënten-formulier. Hoeveelheid blijft als string-buffer
  * voor invoer; bij opslaan parsen we hem naar Double (of null = "naar smaak").
+ * [key] is stabiel per rij zodat Compose focus/IME-state niet kwijtraakt bij
+ * het verwijderen van een tussenliggende rij.
  */
 data class IngredientDraft(
+    val key: Long,
     val naam: String = "",
     val hoeveelheid: String = "",
     val eenheid: String = ""
+)
+
+data class StapDraft(
+    val key: Long,
+    val tekst: String = ""
+)
+
+/**
+ * [volgnummer] maakt elke melding uniek, zodat dezelfde fout bij een tweede
+ * druk op opslaan opnieuw een snackbar triggert.
+ */
+data class Foutmelding(
+    val tekst: String,
+    val volgnummer: Long
 )
 
 data class RecipeEditUiState(
@@ -33,12 +51,12 @@ data class RecipeEditUiState(
     val naam: String = "",
     val categorie: String = "",
     val porties: String = "",
-    val ingredienten: List<IngredientDraft> = listOf(IngredientDraft()),
-    val stappen: List<String> = listOf(""),
+    val ingredienten: List<IngredientDraft> = emptyList(),
+    val stappen: List<StapDraft> = emptyList(),
     val categorieSuggesties: List<String> = emptyList(),
     val isSaving: Boolean = false,
     val savedId: String? = null,
-    val foutmelding: String? = null
+    val foutmelding: Foutmelding? = null
 )
 
 class RecipeEditViewModel(
@@ -46,7 +64,18 @@ class RecipeEditViewModel(
     private val recipeId: String?
 ) : ViewModel() {
 
-    private val _state = MutableStateFlow(RecipeEditUiState(isLoading = recipeId != null))
+    private var volgendeKey = 0L
+    private var volgendeMelding = 0L
+
+    private fun nieuweKey(): Long = volgendeKey++
+
+    private val _state = MutableStateFlow(
+        RecipeEditUiState(
+            isLoading = recipeId != null,
+            ingredienten = listOf(IngredientDraft(key = nieuweKey())),
+            stappen = listOf(StapDraft(key = nieuweKey()))
+        )
+    )
     val state: StateFlow<RecipeEditUiState> = _state.asStateFlow()
 
     init {
@@ -62,20 +91,24 @@ class RecipeEditViewModel(
                 .sortedBy { it.lowercase() }
 
             if (recipeId == null) {
-                _state.value = _state.value.copy(
-                    isLoading = false,
-                    isNew = true,
-                    categorieSuggesties = suggesties
-                )
+                _state.update {
+                    it.copy(
+                        isLoading = false,
+                        isNew = true,
+                        categorieSuggesties = suggesties
+                    )
+                }
             } else {
                 val existing = repository.getById(recipeId)
                 if (existing == null) {
-                    _state.value = _state.value.copy(
-                        isLoading = false,
-                        isNew = true,
-                        categorieSuggesties = suggesties,
-                        foutmelding = "Recept niet gevonden"
-                    )
+                    _state.update {
+                        it.copy(
+                            isLoading = false,
+                            isNew = true,
+                            categorieSuggesties = suggesties,
+                            foutmelding = melding("Recept niet gevonden")
+                        )
+                    }
                 } else {
                     _state.value = RecipeEditUiState(
                         isLoading = false,
@@ -87,13 +120,16 @@ class RecipeEditViewModel(
                         porties = existing.porties.orEmpty(),
                         ingredienten = existing.ingredienten.map { ing ->
                             IngredientDraft(
+                                key = nieuweKey(),
                                 naam = ing.naam,
                                 hoeveelheid = ing.hoeveelheid?.let { formatNumberForInput(it) }
                                     .orEmpty(),
                                 eenheid = ing.eenheid.orEmpty()
                             )
-                        }.ifEmpty { listOf(IngredientDraft()) },
-                        stappen = existing.bereidingswijze.ifEmpty { listOf("") },
+                        }.ifEmpty { listOf(IngredientDraft(key = nieuweKey())) },
+                        stappen = existing.bereidingswijze
+                            .map { StapDraft(key = nieuweKey(), tekst = it) }
+                            .ifEmpty { listOf(StapDraft(key = nieuweKey())) },
                         categorieSuggesties = suggesties
                     )
                 }
@@ -116,14 +152,16 @@ class RecipeEditViewModel(
     }
 
     fun addIngredient() {
-        _state.update { it.copy(ingredienten = it.ingredienten + IngredientDraft()) }
+        _state.update { it.copy(ingredienten = it.ingredienten + IngredientDraft(key = nieuweKey())) }
     }
 
     fun removeIngredient(index: Int) {
         _state.update {
             val list = it.ingredienten.toMutableList()
             if (index in list.indices) list.removeAt(index)
-            it.copy(ingredienten = if (list.isEmpty()) listOf(IngredientDraft()) else list)
+            it.copy(
+                ingredienten = list.ifEmpty { listOf(IngredientDraft(key = nieuweKey())) }
+            )
         }
     }
 
@@ -131,21 +169,21 @@ class RecipeEditViewModel(
         _state.update {
             it.copy(
                 stappen = it.stappen.toMutableList().also { list ->
-                    if (index in list.indices) list[index] = value
+                    if (index in list.indices) list[index] = list[index].copy(tekst = value)
                 }
             )
         }
     }
 
     fun addStap() {
-        _state.update { it.copy(stappen = it.stappen + "") }
+        _state.update { it.copy(stappen = it.stappen + StapDraft(key = nieuweKey())) }
     }
 
     fun removeStap(index: Int) {
         _state.update {
             val list = it.stappen.toMutableList()
             if (index in list.indices) list.removeAt(index)
-            it.copy(stappen = if (list.isEmpty()) listOf("") else list)
+            it.copy(stappen = list.ifEmpty { listOf(StapDraft(key = nieuweKey())) })
         }
     }
 
@@ -154,11 +192,11 @@ class RecipeEditViewModel(
         val naam = s.naam.trim()
         val categorie = s.categorie.trim()
         if (naam.isEmpty()) {
-            _state.value = s.copy(foutmelding = "Naam is verplicht")
+            _state.update { it.copy(foutmelding = melding("Naam is verplicht")) }
             return
         }
         if (categorie.isEmpty()) {
-            _state.value = s.copy(foutmelding = "Categorie is verplicht")
+            _state.update { it.copy(foutmelding = melding("Categorie is verplicht")) }
             return
         }
 
@@ -171,7 +209,7 @@ class RecipeEditViewModel(
                     eenheid = draft.eenheid.trim().ifEmpty { null }
                 )
             }
-        val stappen = s.stappen.map { it.trim() }.filter { it.isNotEmpty() }
+        val stappen = s.stappen.map { it.tekst.trim() }.filter { it.isNotEmpty() }
         val porties = s.porties.trim().ifEmpty { null }
 
         val id = s.recipeId ?: generateId(naam)
@@ -185,13 +223,16 @@ class RecipeEditViewModel(
             bron = Bron.USER
         )
 
-        _state.value = s.copy(isSaving = true, foutmelding = null)
+        _state.update { it.copy(isSaving = true, foutmelding = null) }
         viewModelScope.launch {
             // SEED → USER promotie gebeurt automatisch omdat bron = USER.
             repository.saveUserEdit(recipe)
-            _state.value = _state.value.copy(isSaving = false, savedId = id)
+            _state.update { it.copy(isSaving = false, savedId = id) }
         }
     }
+
+    private fun melding(tekst: String): Foutmelding =
+        Foutmelding(tekst = tekst, volgnummer = volgendeMelding++)
 
     private fun parseHoeveelheid(raw: String): Double? {
         val cleaned = raw.trim().replace(',', '.')
@@ -215,12 +256,6 @@ class RecipeEditViewModel(
             .trim('-')
             .ifEmpty { "recept" }
         return "$base-${System.currentTimeMillis()}"
-    }
-
-    private inline fun MutableStateFlow<RecipeEditUiState>.update(
-        block: (RecipeEditUiState) -> RecipeEditUiState
-    ) {
-        value = block(value)
     }
 
     companion object {

@@ -45,9 +45,7 @@ class SeedLoader(
 
         val existingSeedIds = dao.idsByBron(Bron.SEED).toSet()
         val obsolete = existingSeedIds - newSeedIds
-        obsolete.forEach { dao.deleteById(it) }
-
-        seedRecipes.forEach { dao.upsert(it.toEntity()) }
+        dao.applySeed(obsolete.toList(), seedRecipes.map { it.toEntity() })
     }
 
     companion object {
