@@ -3,7 +3,7 @@
     {
       "id": "tikka-massala-curry",
       "naam": "Tikka massala curry",
-      "categorie": "Kip",
+      "categorie": "Rijst",
       "porties": "4 personen",
       "ingredienten": [
         { "naam": "kipdijfilet", "hoeveelheid": 400, "eenheid": "g" },
@@ -113,7 +113,7 @@
     {
       "id": "bami-met-mienestjes",
       "naam": "Bami met mienestjes",
-      "categorie": "Aziatisch",
+      "categorie": "Anders",
       "porties": "4 personen",
       "ingredienten": [
         { "naam": "mienestjes", "hoeveelheid": 300, "eenheid": "g" },
@@ -128,7 +128,7 @@
     {
       "id": "gnocchi",
       "naam": "Gnocchi ovenschotel",
-      "categorie": "Ovenschotel",
+      "categorie": "Pasta",
       "porties": "4 personen",
       "ingredienten": [
         { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -148,7 +148,7 @@
     {
       "id": "broccoli-ovenschotel",
       "naam": "Broccoli ovenschotel",
-      "categorie": "Ovenschotel",
+      "categorie": "Aardappel",
       "porties": "4 personen",
       "ingredienten": [
         { "naam": "broccoli (roosjes)", "hoeveelheid": 500, "eenheid": "g" },
@@ -178,7 +178,7 @@
     {
       "id": "oer-leidse-hutspot",
       "naam": "Echte Oer-Leidse Hutspot",
-      "categorie": "Stamppot",
+      "categorie": "Aardappel",
       "porties": "4-6 personen",
       "ingredienten": [
         { "naam": "pastinaak (schoongemaakt en in blokjes)", "hoeveelheid": 1200, "eenheid": "g" },
@@ -205,7 +205,7 @@
     {
       "id": "spaanse-tomatenstoof-gehaktballetjes",
       "naam": "Snelle Spaanse tomatenstoof met gehaktballetjes",
-      "categorie": "Stoofpot",
+      "categorie": "Anders",
       "porties": "4 personen",
       "ingredienten": [
         { "naam": "half-om-halfgehakt (mag ook rundergehakt zijn)", "hoeveelheid": 500, "eenheid": "g" },
@@ -258,7 +258,7 @@
     {
       "id": "quiche-prei-spek",
       "naam": "Quiche met prei en spek",
-      "categorie": "Hartige taart",
+      "categorie": "Anders",
       "porties": "4 personen",
       "ingredienten": [
         { "naam": "plakjes diepvries deeg voor hartige taart", "hoeveelheid": 7, "eenheid": "stuk" },
@@ -279,7 +279,7 @@
     {
       "id": "zuurkoolstamppot",
       "naam": "Zuurkoolstamppot met rookworst",
-      "categorie": "Stamppot",
+      "categorie": "Aardappel",
       "porties": "4 personen",
       "ingredienten": [
         { "naam": "zuurkool", "hoeveelheid": null, "eenheid": null },

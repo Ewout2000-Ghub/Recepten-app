@@ -163,7 +163,7 @@ private fun EditForm(state: RecipeEditUiState, viewModel: RecipeEditViewModel) {
                         value = state.categorie,
                         onValueChange = viewModel::onCategorieChange,
                         singleLine = true,
-                        placeholder = { Text("Bijv. Pasta, Kip, Ovenschotel") },
+                        placeholder = { Text("Pasta, Aardappel, Rijst of Anders") },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
                         colors = textFieldColors()

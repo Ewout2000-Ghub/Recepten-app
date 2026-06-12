@@ -70,7 +70,7 @@ JSON-formaat per recept:
 {
   "id": "broccoli-ovenschotel",
   "naam": "Broccoli ovenschotel",
-  "categorie": "Ovenschotel",
+  "categorie": "Aardappel",
   "porties": "4 personen",
   "ingredienten": [
     { "naam": "broccoli (roosjes)", "hoeveelheid": 500, "eenheid": "g" },
@@ -85,6 +85,8 @@ JSON-formaat per recept:
 
 Regels:
 
+- `categorie`: gebruik een van de vier vaste categorieën **Pasta**,
+  **Aardappel**, **Rijst** of **Anders** (ingedeeld naar koolhydraatbasis).
 - `hoeveelheid: null` = "naar smaak" / niet gespecificeerd → UI toont alleen
   de naam.
 - `eenheid` is **vrije tekst** — niet beperkt tot een enum. Veelgebruikte
