@@ -143,7 +143,15 @@
         { "naam": "rode ui", "hoeveelheid": 1, "eenheid": "stuk" },
         { "naam": "suiker", "hoeveelheid": 1, "eenheid": "tl" }
       ],
-      "bereidingswijze": []
+      "bereidingswijze": [
+        "Verwarm de oven voor op 220 graden en vet een ovenschaal in met olie.",
+        "Verhit olie in een pan en bak de ui, knoflook en paprika ongeveer 5 minuten.",
+        "Voeg het gehakt toe met de Italiaanse kruiden, peper, chilivlokken en het bouillonblokje. Bak tot goudbruin.",
+        "Voeg de gezeefde tomaten (passata), suiker, gnocchi, een deel van de geraspte kaas en tweederde van de basilicum toe. Meng goed.",
+        "Schep het mengsel in de ovenschaal en bestrooi met de resterende kaas en de mozzarella.",
+        "Bak 12-15 minuten goudbruin in de oven.",
+        "Laat kort afkoelen en bestrooi met de resterende basilicum voor het serveren."
+      ]
     },
     {
       "id": "broccoli-ovenschotel",
