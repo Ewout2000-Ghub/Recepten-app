@@ -362,6 +362,81 @@
         "Breng op smaak met peper en eventueel zout. Zet het vuur uit en laat de rijst een paar min. afgedekt staan.",
         "Snijd ondertussen de peterselie fijn. Bestrooi het rijstmengsel met de peterselie en serveer direct."
       ]
+    },
+    {
+      "id": "parelcouscous-zoete-aardappel-feta",
+      "naam": "Parelcouscous met zoete aardappel, courgette, feta, zongedroogde tomaat & honing-mosterd",
+      "categorie": "Couscous",
+      "porties": "2 personen",
+      "ingredienten": [
+        { "naam": "parelcouscous", "hoeveelheid": 150, "eenheid": "g" },
+        { "naam": "zoete aardappel", "hoeveelheid": 200, "eenheid": "g" },
+        { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "rode ui", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "Provençaalse kruiden", "hoeveelheid": 1, "eenheid": "el" },
+        { "naam": "zongedroogde tomaat", "hoeveelheid": 50, "eenheid": "g" },
+        { "naam": "feta", "hoeveelheid": 70, "eenheid": "g" },
+        { "naam": "mosterd (sausje)", "hoeveelheid": 3, "eenheid": "tl" },
+        { "naam": "dille (sausje)", "hoeveelheid": 4, "eenheid": "takjes" },
+        { "naam": "honing (sausje)", "hoeveelheid": 1, "eenheid": "el" },
+        { "naam": "extra vierge olijfolie (sausje)", "hoeveelheid": 3, "eenheid": "el" },
+        { "naam": "citroensap (sausje)", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Verwarm de oven voor op 200 graden.",
+        "Schil de zoete aardappel en snijd in blokjes. Snijd de courgette in halve ringen. Snijd de rode ui in vieren. Verdeel de groenten over een bakplaat. Bestrooi met Provençaalse kruiden, peper en zout. Drizzle er wat olijfolie over en hussel door elkaar. Bak de groenten in 25-30 minuten gaar in de oven.",
+        "Kook de parelcouscous volgens de verpakking en giet af.",
+        "Meng de mosterd, fijngesneden dille, honing, extra vierge olijfolie en een scheutje citroensap. Breng op smaak met peper en zout.",
+        "Verdeel de parelcouscous en groenten uit de oven over een bord. Doe de zongedroogde tomaatjes erbij en verkruimel de feta erover. Schenk het sausje erover."
+      ]
+    },
+    {
+      "id": "griekse-rijstschotel",
+      "naam": "Griekse rijstschotel",
+      "categorie": "Rijst",
+      "porties": "2 personen",
+      "ingredienten": [
+        { "naam": "jasmijnrijst", "hoeveelheid": 150, "eenheid": "g" },
+        { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "ui", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "rode paprika", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "zwarte olijven", "hoeveelheid": 40, "eenheid": "g" },
+        { "naam": "bladpeterselie", "hoeveelheid": 10, "eenheid": "g" },
+        { "naam": "feta", "hoeveelheid": 100, "eenheid": "g" },
+        { "naam": "Provençaalse kruiden", "hoeveelheid": 1, "eenheid": "tl" },
+        { "naam": "tomatenpassata", "hoeveelheid": 350, "eenheid": "ml" },
+        { "naam": "olijfolie", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "peper en zout", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Breng per persoon 150 ml licht gezouten water aan de kook, voeg de rijst toe, deksel erop, zet het vuur laag en kook 10-13 minuten zachtjes tot het water is opgenomen. Maak de rijst los met een vork.",
+        "Snijd de courgette, ui en paprika in gelijke blokjes. Snijd de olijven in plakjes. Hak de peterselie fijn. Verkruimel de feta.",
+        "Verhit de olijfolie in een antikleefpan, voeg de courgette, paprika en ui toe en roerbak 5 minuten. Voeg de Provençaalse kruiden toe en breng op smaak met peper en zout. Voeg de tomatenpassata toe en laat 5 minuten zachtjes pruttelen.",
+        "Roer de rijst en olijfplakjes door het groentenmengsel. Serveer met de verkruimelde feta en peterselie erover."
+      ]
+    },
+    {
+      "id": "melanzane-parmigiana",
+      "naam": "Melanzane alla parmigiana",
+      "categorie": "Anders",
+      "porties": "4 personen",
+      "ingredienten": [
+        { "naam": "tomatensaus", "hoeveelheid": 400, "eenheid": "ml" },
+        { "naam": "aubergine", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "ui", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "knoflook", "hoeveelheid": 1, "eenheid": "teen" },
+        { "naam": "verse basilicum", "hoeveelheid": null, "eenheid": null },
+        { "naam": "mozzarella (in dunne plakjes)", "hoeveelheid": 1, "eenheid": "bol" },
+        { "naam": "Parmezaanse kaas (geraspt)", "hoeveelheid": 75, "eenheid": "g" },
+        { "naam": "olijfolie", "hoeveelheid": null, "eenheid": null },
+        { "naam": "peper en zout", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Hak de ui en knoflook fijn. Fruit deze in olijfolie en voeg de tomatensaus toe. Breng op smaak met peper en zout. Laat ongeveer 20 minuten zachtjes pruttelen.",
+        "Verwarm de oven voor op 200 graden. Snijd de aubergines in dunne plakken van ca. 0,5 cm. Bestrooi met zout en laat 20 minuten liggen zodat vocht vrijkomt. Dep het vocht en zout af.",
+        "Verhit olijfolie in een pan. Grill of bak de auberginesplakken aan beide zijden.",
+        "Vet een ovenschaal in. Leg afwisselend laagjes: aubergine, tomatensaus, mozzarella en Parmezaanse kaas. Eindig met kaas. Bak 25 minuten in de oven. Garneer met verse basilicum voor het serveren."
+      ]
     }
   ]
 }
