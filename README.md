@@ -85,8 +85,11 @@ JSON-formaat per recept:
 
 Regels:
 
-- `categorie`: gebruik een van de vier vaste categorieën **Pasta**,
-  **Aardappel**, **Rijst** of **Anders** (ingedeeld naar koolhydraatbasis).
+- `categorie`: vrije tekst, ingedeeld naar koolhydraatbasis. Categorieën worden
+  dynamisch afgeleid uit de recepten zelf (geen vaste lijst in code). Gangbare
+  waarden: **Pasta**, **Aardappel**, **Rijst**, **Couscous**, **Anders**. Gebruik
+  een bestaande waarde tenzij een gerecht echt een nieuwe basis heeft; een nieuwe
+  `categorie`-waarde verschijnt automatisch als groep, filter en suggestie.
 - `hoeveelheid: null` = "naar smaak" / niet gespecificeerd → UI toont alleen
   de naam.
 - `eenheid` is **vrije tekst** — niet beperkt tot een enum. Veelgebruikte
