@@ -18,8 +18,6 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.ewout.recepten.ui.detail.RecipeDetailScreen
 import com.ewout.recepten.ui.detail.RecipeDetailViewModel
-import com.ewout.recepten.ui.edit.RecipeEditScreen
-import com.ewout.recepten.ui.edit.RecipeEditViewModel
 import com.ewout.recepten.ui.list.RecipeListScreen
 import com.ewout.recepten.ui.list.RecipeListViewModel
 import com.ewout.recepten.ui.theme.BrandCream
@@ -28,10 +26,8 @@ import com.ewout.recepten.ui.theme.ReceptenTheme
 object Routes {
     const val LIST = "list"
     const val DETAIL = "detail/{recipeId}"
-    const val EDIT_EXISTING = "edit/{recipeId}"
 
     fun detail(id: String) = "detail/$id"
-    fun editExisting(id: String) = "edit/$id"
 }
 
 class MainActivity : ComponentActivity() {
@@ -83,26 +79,7 @@ private fun ReceptenNavGraph() {
             )
             RecipeDetailScreen(
                 viewModel = vm,
-                onBack = { navController.popBackStack() },
-                onEdit = { id -> navController.navigate(Routes.editExisting(id)) },
-                onDeleted = { navController.popBackStack(Routes.LIST, inclusive = false) }
-            )
-        }
-
-        composable(
-            route = Routes.EDIT_EXISTING,
-            arguments = listOf(navArgument("recipeId") { type = NavType.StringType })
-        ) { backStack ->
-            val recipeId = backStack.arguments?.getString("recipeId").orEmpty()
-            val vm: RecipeEditViewModel = viewModel(
-                key = "edit-$recipeId",
-                factory = RecipeEditViewModel.factory(container, recipeId)
-            )
-            RecipeEditScreen(
-                viewModel = vm,
-                onBack = { navController.popBackStack() },
-                // Detail observeert de database, dus terugkeren volstaat.
-                onSaved = { _ -> navController.popBackStack() }
+                onBack = { navController.popBackStack() }
             )
         }
     }

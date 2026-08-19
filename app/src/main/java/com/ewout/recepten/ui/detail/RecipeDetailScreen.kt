@@ -26,10 +26,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Remove
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -39,16 +36,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -70,16 +62,9 @@ import com.ewout.recepten.ui.theme.TextSecondary
 @Composable
 fun RecipeDetailScreen(
     viewModel: RecipeDetailViewModel,
-    onBack: () -> Unit,
-    onEdit: (String) -> Unit,
-    onDeleted: () -> Unit
+    onBack: () -> Unit
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
-    var showDeleteDialog by remember { mutableStateOf(false) }
-
-    LaunchedEffect(state.isDeleted) {
-        if (state.isDeleted) onDeleted()
-    }
 
     // Houd het scherm aan tijdens het koken.
     val view = LocalView.current
@@ -107,17 +92,6 @@ fun RecipeDetailScreen(
                             contentDescription = "Terug",
                             tint = BrandSurface
                         )
-                    }
-                },
-                actions = {
-                    val recipe = state.recipe
-                    if (recipe != null) {
-                        IconButton(onClick = { onEdit(recipe.id) }) {
-                            Icon(Icons.Default.Edit, contentDescription = "Bewerken", tint = BrandSurface)
-                        }
-                        IconButton(onClick = { showDeleteDialog = true }) {
-                            Icon(Icons.Default.Delete, contentDescription = "Verwijderen", tint = BrandSurface)
-                        }
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -153,34 +127,6 @@ fun RecipeDetailScreen(
                 )
             }
         }
-    }
-
-    if (showDeleteDialog) {
-        val recipe = state.recipe
-        AlertDialog(
-            onDismissRequest = { showDeleteDialog = false },
-            title = { Text("Recept verwijderen?") },
-            text = {
-                Text(
-                    text = recipe?.let { "\"${it.naam}\" wordt definitief verwijderd." }
-                        ?: "Dit recept wordt definitief verwijderd."
-                )
-            },
-            confirmButton = {
-                TextButton(onClick = {
-                    showDeleteDialog = false
-                    viewModel.delete()
-                }) {
-                    Text("Verwijderen", color = BrandBlue)
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showDeleteDialog = false }) {
-                    Text("Annuleren", color = TextSecondary)
-                }
-            },
-            containerColor = BrandSurface
-        )
     }
 }
 

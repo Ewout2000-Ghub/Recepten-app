@@ -14,7 +14,6 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
-import kotlinx.coroutines.launch
 
 /** Eén keuzeoptie in de versie-switcher van een gerecht. */
 data class VersieOptie(
@@ -27,7 +26,6 @@ data class RecipeDetailUiState(
     val recipe: Recipe? = null,
     val versies: List<VersieOptie> = emptyList(),
     val geselecteerdeVersieId: String? = null,
-    val isDeleted: Boolean = false,
     val basisPersonen: Int = STANDAARD_PERSONEN,
     val personen: Int = STANDAARD_PERSONEN,
     val afgevinkteIngredienten: Set<Int> = emptySet(),
@@ -45,8 +43,6 @@ class RecipeDetailViewModel(
     private val repository: RecipeRepository,
     private val recipeId: String
 ) : ViewModel() {
-
-    private val deleted = MutableStateFlow(false)
 
     // null = nog niet gekozen → toon de oorspronkelijk geopende versie.
     private val gekozenVersieId = MutableStateFlow<String?>(null)
@@ -70,10 +66,9 @@ class RecipeDetailViewModel(
     val state: StateFlow<RecipeDetailUiState> = combine(
         groep,
         gekozenVersieId,
-        deleted,
         gekozenPersonen,
         checks
-    ) { groepVersies, gekozenId, isDeleted, personen, (ingChecks, stapChecks) ->
+    ) { groepVersies, gekozenId, personen, (ingChecks, stapChecks) ->
         val huidig = groepVersies.firstOrNull { it.id == gekozenId }
             ?: groepVersies.firstOrNull { it.id == recipeId }
             ?: groepVersies.firstOrNull()
@@ -83,7 +78,6 @@ class RecipeDetailViewModel(
             recipe = huidig,
             versies = groepVersies.map { VersieOptie(it.id, it.versieNaam ?: it.naam) },
             geselecteerdeVersieId = huidig?.id,
-            isDeleted = isDeleted,
             basisPersonen = basis,
             personen = personen ?: basis,
             afgevinkteIngredienten = ingChecks,
@@ -116,17 +110,6 @@ class RecipeDetailViewModel(
 
     fun toggleStap(index: Int) {
         afgevinkteStappen.update { it.toggled(index) }
-    }
-
-    fun delete() {
-        // Verwijder de versie die nu getoond wordt (niet per se de geopende).
-        val teVerwijderen = state.value.recipe?.id ?: recipeId
-        viewModelScope.launch {
-            // Eerst markeren, zodat het scherm wegnavigeert voordat de
-            // database-flow null voor het verwijderde recept emit.
-            deleted.value = true
-            repository.delete(teVerwijderen)
-        }
     }
 
     private fun Set<Int>.toggled(index: Int): Set<Int> =

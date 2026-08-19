@@ -5,7 +5,8 @@ voor de mensvriendelijke versie.
 
 ## Wat dit is
 
-Persoonlijke Android-app om recepten op te zoeken, te bewerken en toe te voegen.
+Persoonlijke Android-app om recepten op te zoeken en te bekijken (porties schalen,
+afvinken tijdens het koken). Geen toevoeg-/bewerk-/verwijder-UI meer.
 **Puur lokaal** op Ewouts Samsung Galaxy S24+ — geen cloud, geen backend, geen
 distributie, geen Play Store. Alle data staat in een lokale Room/SQLite-database
 op het toestel. Communicatie met de gebruiker gaat in het **Nederlands**.
@@ -118,9 +119,11 @@ voegen. Werk dan dit stappenplan af:
 
 ### SEED vs USER
 
-`SEED` = kwam uit de JSON. `USER` = handmatig toegevoegd/bewerkt via de UI. Een via
-de UI bewerkt SEED-recept wordt automatisch USER, zodat re-seeding zijn wijzigingen
-niet overschrijft. Re-seeding raakt USER-records nooit.
+`SEED` = kwam uit de JSON. `USER` = ooit handmatig via de UI toegevoegd/bewerkt.
+**De app heeft geen toevoeg-, bewerk- of verwijder-UI meer** (alleen bekijken en
+koken), dus nieuwe USER-records worden niet meer aangemaakt. Recepten beheer je
+uitsluitend via de seed-JSON. Het `bron`-onderscheid blijft in het datamodel: een
+eventueel bestaand USER-record wordt door re-seeding nooit aangeraakt.
 
 ## Projectstructuur
 
