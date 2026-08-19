@@ -28,9 +28,6 @@ interface RecipeDao {
     )
     fun observeGroup(groepSleutel: String): Flow<List<RecipeEntity>>
 
-    @Query("SELECT * FROM recipes WHERE id = :id LIMIT 1")
-    suspend fun getById(id: String): RecipeEntity?
-
     @Query("SELECT id FROM recipes WHERE bron = :bron")
     suspend fun idsByBron(bron: Bron): List<String>
 
