@@ -533,6 +533,33 @@
         "Voeg stap voor stap de resterende bouillon toe. Kook in totaal ongeveer 25 minuten en proef regelmatig; de rijst moet zacht zijn met een kleine bite.",
         "Rasp de Parmezaanse kaas en roer erdoor. Voeg enkele basilicumblaadjes toe. Schep op borden, verdeel de burrata erover, leg de geroosterde tomaatjes erbij en garneer met basilicum."
       ]
+    },
+    {
+      "id": "pasta-geroosterde-paprikasaus",
+      "naam": "Pasta met geroosterde paprikasaus",
+      "categorie": "Pasta",
+      "porties": "2 personen",
+      "vega": true,
+      "ingredienten": [
+        { "naam": "rode paprika (gehalveerd)", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "knoflook (fijngehakt)", "hoeveelheid": 1, "eenheid": "teen" },
+        { "naam": "rode peper (in ringen)", "hoeveelheid": 0.5, "eenheid": "stuk" },
+        { "naam": "sjalot (in halve ringen)", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "gezeefde tomaten", "hoeveelheid": 250, "eenheid": "g" },
+        { "naam": "verse basilicum", "hoeveelheid": null, "eenheid": null },
+        { "naam": "kookroom", "hoeveelheid": 100, "eenheid": "ml" },
+        { "naam": "pasta naar keuze", "hoeveelheid": 250, "eenheid": "g" },
+        { "naam": "olijfolie", "hoeveelheid": null, "eenheid": null },
+        { "naam": "peper en zout", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Verwarm de oven voor op 200 graden. Leg de gehalveerde paprika's met de binnenkant naar beneden op bakpapier. Besprenkel met olijfolie en bestrooi met peper en zout. Rooster in het midden van de oven 30 minuten zacht.",
+        "Fruit de knoflook, rode peper en sjalot aan in een koekenpan. Snijd de geroosterde paprika's in grove stukken en voeg toe. Schep goed om.",
+        "Kook ondertussen de pasta volgens de verpakking gaar.",
+        "Schenk de gezeefde tomaten in de pan en voeg de basilicum toe. Breng aan de kook en laat 5 minuten pruttelen. Maal daarna glad in een blender of foodprocessor.",
+        "Schenk de gladde saus terug in de pan en voeg de kookroom toe. Verwarm door.",
+        "Schep de gaar gekookte pasta bij de saus en schep alles goed om. Serveer direct."
+      ]
     }
   ]
 }
