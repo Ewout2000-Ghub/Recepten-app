@@ -101,6 +101,10 @@ fun RecipeListScreen(
                     onQueryChange = viewModel::onQueryChange,
                     onClear = viewModel::clearQuery
                 )
+                DietFilterRow(
+                    selected = state.dietFilter,
+                    onToggle = viewModel::toggleDiet
+                )
                 if (state.allCategories.isNotEmpty()) {
                     CategoryFilterRow(
                         categories = state.allCategories,
@@ -156,6 +160,48 @@ private fun SearchBar(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 12.dp)
+    )
+}
+
+@Composable
+private fun DietFilterRow(
+    selected: DietFilter,
+    onToggle: (DietFilter) -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 4.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        DietChip("Vega", selected == DietFilter.VEGA) { onToggle(DietFilter.VEGA) }
+        DietChip("Vegan", selected == DietFilter.VEGAN) { onToggle(DietFilter.VEGAN) }
+    }
+}
+
+@Composable
+private fun DietChip(
+    label: String,
+    selected: Boolean,
+    onClick: () -> Unit
+) {
+    FilterChip(
+        selected = selected,
+        onClick = onClick,
+        label = { Text(label) },
+        colors = FilterChipDefaults.filterChipColors(
+            containerColor = BrandSurface,
+            selectedContainerColor = BrandBlue,
+            labelColor = TextPrimary,
+            selectedLabelColor = BrandSurface
+        ),
+        border = FilterChipDefaults.filterChipBorder(
+            enabled = true,
+            selected = selected,
+            borderColor = MaterialTheme.colorScheme.outline,
+            selectedBorderColor = BrandBlue
+        )
     )
 }
 

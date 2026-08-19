@@ -16,7 +16,9 @@ data class RecipeEntity(
     val bereidingswijze: List<String>,
     val bron: Bron,
     val groepId: String? = null,
-    val versieNaam: String? = null
+    val versieNaam: String? = null,
+    val vega: Boolean = false,
+    val vegan: Boolean = false
 )
 
 fun RecipeEntity.toDomain(): Recipe = Recipe(
@@ -28,7 +30,9 @@ fun RecipeEntity.toDomain(): Recipe = Recipe(
     bereidingswijze = bereidingswijze,
     bron = bron,
     groepId = groepId,
-    versieNaam = versieNaam
+    versieNaam = versieNaam,
+    vega = vega,
+    vegan = vegan
 )
 
 fun Recipe.toEntity(): RecipeEntity = RecipeEntity(
@@ -40,5 +44,7 @@ fun Recipe.toEntity(): RecipeEntity = RecipeEntity(
     bereidingswijze = bereidingswijze,
     bron = bron,
     groepId = groepId,
-    versieNaam = versieNaam
+    versieNaam = versieNaam,
+    vega = vega,
+    vegan = vegan
 )

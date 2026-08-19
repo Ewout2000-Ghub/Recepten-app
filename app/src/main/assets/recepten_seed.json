@@ -368,6 +368,7 @@
       "naam": "Parelcouscous met zoete aardappel, courgette, feta, zongedroogde tomaat & honing-mosterd",
       "categorie": "Couscous",
       "porties": "2 personen",
+      "vega": true,
       "ingredienten": [
         { "naam": "parelcouscous", "hoeveelheid": 150, "eenheid": "g" },
         { "naam": "zoete aardappel", "hoeveelheid": 200, "eenheid": "g" },
@@ -395,6 +396,7 @@
       "naam": "Griekse rijstschotel",
       "categorie": "Rijst",
       "porties": "2 personen",
+      "vega": true,
       "ingredienten": [
         { "naam": "jasmijnrijst", "hoeveelheid": 150, "eenheid": "g" },
         { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -420,6 +422,7 @@
       "naam": "Melanzane alla parmigiana",
       "categorie": "Anders",
       "porties": "4 personen",
+      "vega": true,
       "ingredienten": [
         { "naam": "tomatensaus", "hoeveelheid": 400, "eenheid": "ml" },
         { "naam": "aubergine", "hoeveelheid": 2, "eenheid": "stuk" },
@@ -510,6 +513,7 @@
       "naam": "Tomatenrisotto",
       "categorie": "Risotto",
       "porties": "4 personen",
+      "vega": true,
       "ingredienten": [
         { "naam": "risottorijst", "hoeveelheid": 150, "eenheid": "g" },
         { "naam": "ui", "hoeveelheid": 1, "eenheid": "stuk" },

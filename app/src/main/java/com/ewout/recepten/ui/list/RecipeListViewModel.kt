@@ -13,13 +13,23 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 
+enum class DietFilter { NONE, VEGA, VEGAN }
+
 data class RecipeListUiState(
     val isLoading: Boolean = true,
     val query: String = "",
     val selectedCategories: Set<String> = emptySet(),
     val allCategories: List<String> = emptyList(),
     val groups: List<CategoryGroup> = emptyList(),
-    val collapsedCategories: Set<String> = emptySet()
+    val collapsedCategories: Set<String> = emptySet(),
+    val dietFilter: DietFilter = DietFilter.NONE
+)
+
+private data class Filters(
+    val query: String,
+    val cats: Set<String>,
+    val collapsed: Set<String>,
+    val diet: DietFilter
 )
 
 data class CategoryGroup(
@@ -40,6 +50,7 @@ class RecipeListViewModel(
     private val query = MutableStateFlow("")
     private val selectedCategories = MutableStateFlow<Set<String>>(emptySet())
     private val collapsed = MutableStateFlow<Set<String>>(emptySet())
+    private val dietFilter = MutableStateFlow(DietFilter.NONE)
 
     private val recipes: StateFlow<List<Recipe>> = repository.observeAll()
         .stateIn(viewModelScope, SharingStarted.Eagerly, emptyList())
@@ -47,20 +58,25 @@ class RecipeListViewModel(
     val uiState: StateFlow<RecipeListUiState> = combine(
         recipes,
         seedReady,
-        query,
-        selectedCategories,
-        collapsed
-    ) { recipeList, ready, q, cats, coll ->
+        combine(query, selectedCategories, collapsed, dietFilter) { q, cats, coll, diet ->
+            Filters(q, cats, coll, diet)
+        }
+    ) { recipeList, ready, f ->
         val loading = !ready && recipeList.isEmpty()
         val allCats = recipeList.map { it.categorie }.distinct().sortedBy { it.lowercase() }
 
-        val trimmed = q.trim()
+        val trimmed = f.query.trim()
         val filtered = recipeList.filter { recipe ->
-            val matchesCategory = cats.isEmpty() || recipe.categorie in cats
+            val matchesCategory = f.cats.isEmpty() || recipe.categorie in f.cats
             val matchesQuery = trimmed.isEmpty() ||
                 recipe.naam.contains(trimmed, ignoreCase = true) ||
                 recipe.ingredienten.any { it.naam.contains(trimmed, ignoreCase = true) }
-            matchesCategory && matchesQuery
+            val matchesDiet = when (f.diet) {
+                DietFilter.NONE -> true
+                DietFilter.VEGA -> recipe.vega
+                DietFilter.VEGAN -> recipe.vegan
+            }
+            matchesCategory && matchesQuery && matchesDiet
         }
 
         // Toon per gerecht één kaart: versies delen een groepsleutel. Kies bij
@@ -90,11 +106,12 @@ class RecipeListViewModel(
 
         RecipeListUiState(
             isLoading = loading,
-            query = q,
-            selectedCategories = cats,
+            query = f.query,
+            selectedCategories = f.cats,
             allCategories = allCats,
             groups = grouped,
-            collapsedCategories = coll
+            collapsedCategories = f.collapsed,
+            dietFilter = f.diet
         )
     }.stateIn(
         viewModelScope,
@@ -118,6 +135,11 @@ class RecipeListViewModel(
 
     fun clearCategoryFilters() {
         selectedCategories.value = emptySet()
+    }
+
+    /** Zet het dieet-filter aan; nogmaals op dezelfde knop zet het weer uit. */
+    fun toggleDiet(target: DietFilter) {
+        dietFilter.value = if (dietFilter.value == target) DietFilter.NONE else target
     }
 
     fun toggleCollapsed(categorie: String) {

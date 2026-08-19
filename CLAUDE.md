@@ -42,6 +42,15 @@ compileerbaar aanleveren; de gebruiker test op het toestel.
 | `bron` | Bron | `SEED` of `USER` — bij JSON weglaten, SeedLoader zet 'm op `SEED` |
 | `groepId` | String? | recepten met dezelfde `groepId` zijn versies van één gerecht |
 | `versieNaam` | String? | korte versienaam, bv. `"Origineel"` |
+| `vega` | Boolean | vegetarisch (geen vlees/vis); default `false`. Zet bij vegan óók `true` |
+| `vegan` | Boolean | veganistisch (geen dierlijke producten); default `false` |
+
+`vega`/`vegan` voeden de dieet-filterknoppen ("Vega"/"Vegan") bovenaan de lijst
+([RecipeListViewModel.kt](app/src/main/java/com/ewout/recepten/ui/list/RecipeListViewModel.kt),
+`DietFilter`). Het zijn **geen** categorieën — recepten blijven in hun eigen
+categorie; het filter staat standaard uit. Opgeslagen als Room-kolommen (DB v3);
+bij een nieuw dieet-veld een migratie toevoegen zoals `MIGRATION_2_3` in
+[RecipeDatabase.kt](app/src/main/java/com/ewout/recepten/data/local/RecipeDatabase.kt).
 
 `Ingredient` ([Ingredient.kt](app/src/main/java/com/ewout/recepten/data/Ingredient.kt)):
 `naam: String`, `hoeveelheid: Double? = null`, `eenheid: String? = null`.
@@ -93,6 +102,9 @@ voegen. Werk dan dit stappenplan af:
      naam, bv. `"mosterd (sausje)"`.
    - `bereidingswijze`: één stap per array-element; herschrijf beknopt in nette,
      hele Nederlandse zinnen (getallen zoals oventemperatuur/tijden behouden).
+   - `vega`/`vegan`: bepaal uit de ingrediënten. Vlees/vis → beide weglaten
+     (default false). Vegetarisch (met kaas/ei/honing) → `"vega": true`. Zonder
+     enig dierlijk product → `"vega": true` én `"vegan": true`.
 3. **Verhoog `SEED_VERSION` met 1** in
    [SeedVersion.kt](app/src/main/java/com/ewout/recepten/data/seed/SeedVersion.kt).
    **Verplicht** — zonder ophoging leest de app de nieuwe JSON niet in.

@@ -19,7 +19,11 @@ data class Recipe(
      */
     val groepId: String? = null,
     /** Korte naam van deze versie, bijv. "Origineel". Null = toon [naam]. */
-    val versieNaam: String? = null
+    val versieNaam: String? = null,
+    /** Vegetarisch (geen vlees/vis). Vegan-recepten zijn ook vega. */
+    val vega: Boolean = false,
+    /** Veganistisch (geen dierlijke producten). */
+    val vegan: Boolean = false
 ) {
     /** De sleutel waarop versies van hetzelfde gerecht worden gegroepeerd. */
     val groepSleutel: String get() = groepId ?: id

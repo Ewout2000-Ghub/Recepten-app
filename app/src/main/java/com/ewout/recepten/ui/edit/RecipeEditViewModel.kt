@@ -51,6 +51,8 @@ data class RecipeEditUiState(
     // Versie-info wordt niet in dit scherm bewerkt, maar wel behouden bij opslaan.
     val groepId: String? = null,
     val versieNaam: String? = null,
+    val vega: Boolean = false,
+    val vegan: Boolean = false,
     val naam: String = "",
     val categorie: String = "",
     val porties: String = "",
@@ -120,6 +122,8 @@ class RecipeEditViewModel(
                         sourceBron = existing.bron,
                         groepId = existing.groepId,
                         versieNaam = existing.versieNaam,
+                        vega = existing.vega,
+                        vegan = existing.vegan,
                         naam = existing.naam,
                         categorie = existing.categorie,
                         porties = existing.porties.orEmpty(),
@@ -227,7 +231,9 @@ class RecipeEditViewModel(
             bereidingswijze = stappen,
             bron = Bron.USER,
             groepId = s.groepId,
-            versieNaam = s.versieNaam
+            versieNaam = s.versieNaam,
+            vega = s.vega,
+            vegan = s.vegan
         )
 
         _state.update { it.copy(isSaving = true, foutmelding = null) }
