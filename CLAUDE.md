@@ -67,15 +67,38 @@ versie-switcher op de detailpagina. De versie waarvan `id == groepId` is de
 ankerversie die de groep in de lijst representeert. Geef elke versie een
 `versieNaam`. Voorbeeld: de twee "Pasta bolognese"-entries in de seed.
 
-## Een recept toevoegen/wijzigen (de standaardtaak)
+## Recepten toevoegen (de meest voorkomende taak)
 
-1. Bewerk [app/src/main/assets/recepten_seed.json](app/src/main/assets/recepten_seed.json).
-   Zelfde structuur als bestaande entries. `bron` weglaten. Sausonderdelen zonder
-   eigen groepsveld: markeer met een suffix in de naam, bv. `"mosterd (sausje)"`.
-2. Verhoog `SEED_VERSION` met 1 in
+Dit is verreweg de vaakst gevraagde taak: de gebruiker vindt leuke recepten
+(als losse tekst of als **link(s)** naar receptensites) en vraagt ze toe te
+voegen. Werk dan dit stappenplan af:
+
+1. **Verzamel de bron.** Bij een URL: haal de pagina op met `WebFetch` en vraag
+   naam, porties, ingrediënten (met hoeveelheid + eenheid) en de stappen. Blokkeert
+   een site `WebFetch` met **HTTP 403** (bv. `eefkooktzo.nl`), haal de HTML dan op
+   met `curl -sL -A "<browser user-agent>"` naar een tijdelijk bestand en lees het
+   recept uit de JSON-LD (`recipeIngredient`, `recipeInstructions`, `recipeYield`).
+   Ruim het tijdelijke bestand daarna op. **Nooit** recepten verzinnen — ontbreekt
+   de inhoud, vraag er expliciet om.
+2. **Zet per recept een JSON-entry** in
+   [recepten_seed.json](app/src/main/assets/recepten_seed.json), zelfde structuur en
+   stijl als bestaande entries (2-spaces, veldvolgorde `id, naam, categorie, porties,
+   ingredienten, bereidingswijze`). `bron` **weglaten** (SeedLoader zet 'm op SEED).
+   - `id`: kebab-case, uniek, afgeleid van de naam (accenten normaliseren).
+   - `categorie`: op koolhydraatbasis (zie categorieën). Twijfel? **Benoem de keuze
+     richting de gebruiker** en gebruik bij voorkeur een bestaande waarde.
+   - `porties`: neem over van de bron (bv. `"2 personen"`, `"4 personen"`).
+   - Ingrediënten: `hoeveelheid` als getal, of `null` = "naar smaak"/onbepaald;
+     `eenheid` vrije tekst. Sausonderdelen zonder eigen groepsveld: suffix in de
+     naam, bv. `"mosterd (sausje)"`.
+   - `bereidingswijze`: één stap per array-element; herschrijf beknopt in nette,
+     hele Nederlandse zinnen (getallen zoals oventemperatuur/tijden behouden).
+3. **Verhoog `SEED_VERSION` met 1** in
    [SeedVersion.kt](app/src/main/java/com/ewout/recepten/data/seed/SeedVersion.kt).
-   **Dit is verplicht** — zonder ophoging leest de app de nieuwe JSON niet in.
-3. De gebruiker build/installeert. Bij start vergelijkt
+   **Verplicht** — zonder ophoging leest de app de nieuwe JSON niet in.
+4. **Commit & push** in het Nederlands (zie Conventies) — direct op `main`, zoals de
+   git-historie laat zien. Data-commit en eventuele docs-commit gescheiden houden.
+5. De gebruiker build/installeert via Android Studio. Bij start vergelijkt
    [SeedLoader.kt](app/src/main/java/com/ewout/recepten/data/seed/SeedLoader.kt)
    `SEED_VERSION` met `applied_seed_version` in SharedPreferences. Is hij hoger:
    alle SEED-records worden ge-upsert op `id`; SEED-records die niet meer in de
