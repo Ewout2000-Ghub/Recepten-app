@@ -162,7 +162,7 @@
     {
       "id": "gnocchi",
       "naam": "Gnocchi ovenschotel",
-      "categorie": "Aardappel",
+      "categorie": "Ovenschotel",
       "porties": "4 personen",
       "ingredienten": [
         { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -190,7 +190,7 @@
     {
       "id": "broccoli-ovenschotel",
       "naam": "Broccoli ovenschotel",
-      "categorie": "Aardappel",
+      "categorie": "Ovenschotel",
       "porties": "4 personen",
       "ingredienten": [
         { "naam": "broccoli (roosjes)", "hoeveelheid": 500, "eenheid": "g" },
@@ -472,7 +472,7 @@
     {
       "id": "ovenschotel-bloemkool",
       "naam": "Ovenschotel met bloemkool",
-      "categorie": "Aardappel",
+      "categorie": "Ovenschotel",
       "porties": "4 personen",
       "ingredienten": [
         { "naam": "aardappels (iets kruimig)", "hoeveelheid": 1, "eenheid": "kg" },
@@ -508,7 +508,7 @@
     {
       "id": "tomatenrisotto",
       "naam": "Tomatenrisotto",
-      "categorie": "Rijst",
+      "categorie": "Risotto",
       "porties": "4 personen",
       "ingredienten": [
         { "naam": "risottorijst", "hoeveelheid": 150, "eenheid": "g" },
