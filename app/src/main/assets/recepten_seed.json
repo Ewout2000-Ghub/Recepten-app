@@ -437,6 +437,98 @@
         "Verhit olijfolie in een pan. Grill of bak de auberginesplakken aan beide zijden.",
         "Vet een ovenschaal in. Leg afwisselend laagjes: aubergine, tomatensaus, mozzarella en Parmezaanse kaas. Eindig met kaas. Bak 25 minuten in de oven. Garneer met verse basilicum voor het serveren."
       ]
+    },
+    {
+      "id": "chili-con-carne",
+      "naam": "Chili con carne",
+      "categorie": "Rijst",
+      "porties": "4 personen",
+      "ingredienten": [
+        { "naam": "grote ui", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "knoflook", "hoeveelheid": 2, "eenheid": "teen" },
+        { "naam": "rode paprika", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "chili con carne kruidenmix", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "olijfolie", "hoeveelheid": 1, "eenheid": "el" },
+        { "naam": "rundergehakt", "hoeveelheid": 500, "eenheid": "g" },
+        { "naam": "kidneybonen (of bruine bonen)", "hoeveelheid": 450, "eenheid": "g" },
+        { "naam": "tomatenblokjes (blik)", "hoeveelheid": 400, "eenheid": "g" },
+        { "naam": "tomatenpuree", "hoeveelheid": 70, "eenheid": "g" },
+        { "naam": "gezeefde tomaten", "hoeveelheid": 200, "eenheid": "ml" },
+        { "naam": "maïs", "hoeveelheid": 140, "eenheid": "g" },
+        { "naam": "zure room", "hoeveelheid": 250, "eenheid": "ml" },
+        { "naam": "peper en zout", "hoeveelheid": null, "eenheid": null },
+        { "naam": "peterselie (of koriander)", "hoeveelheid": null, "eenheid": null },
+        { "naam": "rijst", "hoeveelheid": 300, "eenheid": "g" }
+      ],
+      "bereidingswijze": [
+        "Snijd de ui en knoflook fijn en bak deze in een grote wokpan met olie.",
+        "Voeg het gehakt toe en bak dit rul. Meng de kruidenmix erdoor.",
+        "Snijd de rode paprika's in stukjes en bak enkele minuten mee.",
+        "Voeg tomatenpuree, tomatenblokjes en gezeefde tomaten toe. Breng op smaak met peper en zout. Laat 10 minuten zachtjes koken.",
+        "Voeg de uitgelekte bonen en maïs toe. Laat nog 10 minuten pruttelen. Kook ondertussen de rijst gaar.",
+        "Serveer met een schep zure room, fijngehakte peterselie of koriander en rijst."
+      ]
+    },
+    {
+      "id": "ovenschotel-bloemkool",
+      "naam": "Ovenschotel met bloemkool",
+      "categorie": "Aardappel",
+      "porties": "4 personen",
+      "ingredienten": [
+        { "naam": "aardappels (iets kruimig)", "hoeveelheid": 1, "eenheid": "kg" },
+        { "naam": "bloemkool (in kleine roosjes)", "hoeveelheid": 500, "eenheid": "g" },
+        { "naam": "ui", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "knoflook", "hoeveelheid": 2, "eenheid": "teen" },
+        { "naam": "gehakt", "hoeveelheid": 500, "eenheid": "g" },
+        { "naam": "kerriepoeder", "hoeveelheid": 1, "eenheid": "el" },
+        { "naam": "gerookte paprikapoeder", "hoeveelheid": 1, "eenheid": "el" },
+        { "naam": "crème fraîche", "hoeveelheid": 200, "eenheid": "g" },
+        { "naam": "melk", "hoeveelheid": 100, "eenheid": "ml" },
+        { "naam": "ei (middel)", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "peterselie (vers, fijngesneden)", "hoeveelheid": 1, "eenheid": "el" },
+        { "naam": "uienpoeder", "hoeveelheid": 1, "eenheid": "tl" },
+        { "naam": "geraspte kaas", "hoeveelheid": 75, "eenheid": "g" },
+        { "naam": "olie, nootmuskaat, peper en zout", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Verwarm de oven voor op 175 graden boven- en onderwarmte.",
+        "Schil de aardappels en snijd ze in blokjes.",
+        "Zet een ruime pan met water en een snuf zout op het vuur en kook hierin de aardappels beetgaar.",
+        "Zet nog een ruime pan met water en een snuf zout op het vuur en kook hierin de bloemkool beetgaar.",
+        "Snipper ondertussen de ui en snijd de knoflook fijn.",
+        "Verhit een beetje olie in een ruime pan en fruit hierin de ui en knoflook aan tot het lekker begint te ruiken.",
+        "Voeg dan het gehakt toe en bak dit rul terwijl je het op smaak brengt met een eetlepel kerriepoeder en een eetlepel gerookte paprikapoeder.",
+        "Als de bloemkool beetgaar is, giet je die af en voeg je hem toe bij het gehakt. Schep om zodat ook de bloemkool gekruid is en breng verder op smaak met peper en zout. Bak de bloemkool kort mee.",
+        "Giet de aardappels af als ze gaar zijn en stamp ze fijn tot puree. Meng 50 gram crème fraîche, een scheutje melk en naar smaak peper, zout en nootmuskaat erdoor.",
+        "Maak het roommengsel door 150 gram crème fraîche, 100 ml melk, 1 ei, 1 eetlepel fijngesneden peterselie en 1 theelepel uienpoeder te mengen; breng op smaak met peper en zout.",
+        "Verdeel het gehakt met de bloemkool over de bodem van een ruime ovenschaal, verdeel hierover het roommengsel en daaroverheen de aardappelpuree. Strooi de geraspte kaas erover.",
+        "Zet de ovenschaal ca. 30-45 minuten in de oven tot de aardappelpuree licht goudbruin is."
+      ]
+    },
+    {
+      "id": "tomatenrisotto",
+      "naam": "Tomatenrisotto",
+      "categorie": "Rijst",
+      "porties": "4 personen",
+      "ingredienten": [
+        { "naam": "risottorijst", "hoeveelheid": 150, "eenheid": "g" },
+        { "naam": "ui", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "knoflook", "hoeveelheid": 1, "eenheid": "teen" },
+        { "naam": "verse basilicum", "hoeveelheid": null, "eenheid": null },
+        { "naam": "olie", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "droge witte wijn", "hoeveelheid": null, "eenheid": null },
+        { "naam": "warme groentebouillon", "hoeveelheid": 300, "eenheid": "ml" },
+        { "naam": "cherrytomaatjes aan tak", "hoeveelheid": 250, "eenheid": "g" },
+        { "naam": "Parmezaanse kaas", "hoeveelheid": 50, "eenheid": "g" },
+        { "naam": "Tomato Frito of tomatensaus", "hoeveelheid": 350, "eenheid": "ml" },
+        { "naam": "burrata (of mozzarella)", "hoeveelheid": 1, "eenheid": "stuk" }
+      ],
+      "bereidingswijze": [
+        "Verwarm de oven op 200 graden. Snipper de ui en knoflook en fruit deze aan in een pan met een eetlepel olie. Voeg de risottorijst toe en bak 3 minuten mee.",
+        "Blus af met witte wijn en wacht tot die is opgenomen. Voeg de tomatensaus en een soeplepel bouillon toe en roer af en toe door. Rooster ondertussen de cherrytomaatjes (besprenkeld met olie, zout en peper) 15 minuten in de oven of 10 minuten in de airfryer.",
+        "Voeg stap voor stap de resterende bouillon toe. Kook in totaal ongeveer 25 minuten en proef regelmatig; de rijst moet zacht zijn met een kleine bite.",
+        "Rasp de Parmezaanse kaas en roer erdoor. Voeg enkele basilicumblaadjes toe. Schep op borden, verdeel de burrata erover, leg de geroosterde tomaatjes erbij en garneer met basilicum."
+      ]
     }
   ]
 }
