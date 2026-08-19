@@ -5,11 +5,11 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 
 private val ReceptenColorScheme = lightColorScheme(
-    primary = BrandOrange,
+    primary = BrandBlue,
     onPrimary = BrandSurface,
-    primaryContainer = BrandOrange,
+    primaryContainer = BrandBlue,
     onPrimaryContainer = BrandSurface,
-    secondary = BrandOrangeDark,
+    secondary = BrandBlueDark,
     onSecondary = BrandSurface,
     background = BrandCream,
     onBackground = TextPrimary,

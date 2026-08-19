@@ -2,8 +2,9 @@ package com.ewout.recepten.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val BrandOrange = Color(0xFFD97757)
-val BrandOrangeDark = Color(0xFFB35E45)
+// RAL 5024 (Pastelblauw) als hoofdaccentkleur, met een donkerder variant.
+val BrandBlue = Color(0xFF6093AC)
+val BrandBlueDark = Color(0xFF4D768A)
 val BrandCream = Color(0xFFFAF6EF)
 val BrandSurface = Color(0xFFFFFFFF)
 val BrandSurfaceMuted = Color(0xFFF3ECDF)

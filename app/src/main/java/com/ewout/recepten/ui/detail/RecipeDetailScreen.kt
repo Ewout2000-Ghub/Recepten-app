@@ -61,7 +61,7 @@ import com.ewout.recepten.data.Ingredient
 import com.ewout.recepten.data.Recipe
 import com.ewout.recepten.ui.formatHoeveelheid
 import com.ewout.recepten.ui.theme.BrandCream
-import com.ewout.recepten.ui.theme.BrandOrange
+import com.ewout.recepten.ui.theme.BrandBlue
 import com.ewout.recepten.ui.theme.BrandSurface
 import com.ewout.recepten.ui.theme.BrandSurfaceMuted
 import com.ewout.recepten.ui.theme.TextPrimary
@@ -121,7 +121,7 @@ fun RecipeDetailScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = BrandOrange,
+                    containerColor = BrandBlue,
                     titleContentColor = BrandSurface
                 )
             )
@@ -135,7 +135,7 @@ fun RecipeDetailScreen(
         ) {
             when {
                 state.isLoading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    CircularProgressIndicator(color = BrandOrange)
+                    CircularProgressIndicator(color = BrandBlue)
                 }
                 state.recipe == null -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     Text(
@@ -171,7 +171,7 @@ fun RecipeDetailScreen(
                     showDeleteDialog = false
                     viewModel.delete()
                 }) {
-                    Text("Verwijderen", color = BrandOrange)
+                    Text("Verwijderen", color = BrandBlue)
                 }
             },
             dismissButton = {
@@ -305,7 +305,7 @@ private fun VersieSwitcher(
                 val geselecteerd = versie.id == geselecteerdeId
                 Surface(
                     shape = RoundedCornerShape(50),
-                    color = if (geselecteerd) BrandOrange else BrandSurfaceMuted,
+                    color = if (geselecteerd) BrandBlue else BrandSurfaceMuted,
                     modifier = Modifier
                         .clip(RoundedCornerShape(50))
                         .clickable { onSelect(versie.id) }
@@ -340,7 +340,7 @@ private fun PersonenStepper(
                 Text(
                     text = "Hoeveelheden geschaald van $basisPersonen",
                     style = MaterialTheme.typography.labelMedium,
-                    color = BrandOrange
+                    color = BrandBlue
                 )
             }
         }
@@ -378,7 +378,7 @@ private fun StepperKnop(
         modifier = Modifier
             .size(36.dp)
             .clip(CircleShape)
-            .background(if (enabled) BrandOrange else BrandSurfaceMuted)
+            .background(if (enabled) BrandBlue else BrandSurfaceMuted)
     ) {
         Icon(
             imageVector = icon,
@@ -423,13 +423,13 @@ private fun IngredientRow(
                 Icon(
                     imageVector = Icons.Default.Check,
                     contentDescription = null,
-                    tint = BrandOrange,
+                    tint = BrandBlue,
                     modifier = Modifier.size(18.dp)
                 )
             } else {
                 Text(
                     text = "•",
-                    color = BrandOrange,
+                    color = BrandBlue,
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
@@ -471,7 +471,7 @@ private fun StepRow(
             modifier = Modifier
                 .size(28.dp)
                 .clip(CircleShape)
-                .background(if (checked) BrandSurfaceMuted else BrandOrange),
+                .background(if (checked) BrandSurfaceMuted else BrandBlue),
             contentAlignment = Alignment.Center
         ) {
             if (checked) {

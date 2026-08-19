@@ -55,7 +55,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.ewout.recepten.ui.theme.BrandCream
-import com.ewout.recepten.ui.theme.BrandOrange
+import com.ewout.recepten.ui.theme.BrandBlue
 import com.ewout.recepten.ui.theme.BrandSurface
 import com.ewout.recepten.ui.theme.BrandSurfaceMuted
 import com.ewout.recepten.ui.theme.TextPrimary
@@ -116,7 +116,7 @@ fun RecipeEditScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = BrandOrange,
+                    containerColor = BrandBlue,
                     titleContentColor = BrandSurface
                 )
             )
@@ -130,7 +130,7 @@ fun RecipeEditScreen(
         ) {
             when {
                 state.isLoading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    CircularProgressIndicator(color = BrandOrange)
+                    CircularProgressIndicator(color = BrandBlue)
                 }
                 else -> EditForm(state = state, viewModel = viewModel)
             }
@@ -348,9 +348,9 @@ private fun AddRowButton(text: String, onClick: () -> Unit) {
         onClick = onClick,
         modifier = Modifier.fillMaxWidth()
     ) {
-        Icon(Icons.Default.Add, contentDescription = null, tint = BrandOrange)
+        Icon(Icons.Default.Add, contentDescription = null, tint = BrandBlue)
         Spacer(Modifier.width(8.dp))
-        Text(text, color = BrandOrange, style = MaterialTheme.typography.labelLarge)
+        Text(text, color = BrandBlue, style = MaterialTheme.typography.labelLarge)
     }
 }
 
@@ -358,8 +358,8 @@ private fun AddRowButton(text: String, onClick: () -> Unit) {
 private fun textFieldColors() = OutlinedTextFieldDefaults.colors(
     focusedContainerColor = BrandSurface,
     unfocusedContainerColor = BrandSurface,
-    focusedBorderColor = BrandOrange,
+    focusedBorderColor = BrandBlue,
     unfocusedBorderColor = MaterialTheme.colorScheme.outline,
-    cursorColor = BrandOrange,
-    focusedLabelColor = BrandOrange
+    cursorColor = BrandBlue,
+    focusedLabelColor = BrandBlue
 )

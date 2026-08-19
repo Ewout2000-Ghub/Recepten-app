@@ -28,7 +28,6 @@ import com.ewout.recepten.ui.theme.ReceptenTheme
 object Routes {
     const val LIST = "list"
     const val DETAIL = "detail/{recipeId}"
-    const val EDIT_NEW = "edit/new"
     const val EDIT_EXISTING = "edit/{recipeId}"
 
     fun detail(id: String) = "detail/$id"
@@ -69,8 +68,7 @@ private fun ReceptenNavGraph() {
             )
             RecipeListScreen(
                 viewModel = vm,
-                onRecipeClick = { id -> navController.navigate(Routes.detail(id)) },
-                onAddClick = { navController.navigate(Routes.EDIT_NEW) }
+                onRecipeClick = { id -> navController.navigate(Routes.detail(id)) }
             )
         }
 
@@ -88,21 +86,6 @@ private fun ReceptenNavGraph() {
                 onBack = { navController.popBackStack() },
                 onEdit = { id -> navController.navigate(Routes.editExisting(id)) },
                 onDeleted = { navController.popBackStack(Routes.LIST, inclusive = false) }
-            )
-        }
-
-        composable(Routes.EDIT_NEW) {
-            val vm: RecipeEditViewModel = viewModel(
-                key = "edit-new",
-                factory = RecipeEditViewModel.factory(container, null)
-            )
-            RecipeEditScreen(
-                viewModel = vm,
-                onBack = { navController.popBackStack() },
-                onSaved = { id ->
-                    navController.popBackStack(Routes.LIST, inclusive = false)
-                    navController.navigate(Routes.detail(id))
-                }
             )
         }
 

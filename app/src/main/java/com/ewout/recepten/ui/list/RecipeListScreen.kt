@@ -25,7 +25,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
@@ -39,7 +38,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -61,7 +59,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.ewout.recepten.data.Recipe
 import com.ewout.recepten.ui.theme.BrandCream
-import com.ewout.recepten.ui.theme.BrandOrange
+import com.ewout.recepten.ui.theme.BrandBlue
 import com.ewout.recepten.ui.theme.BrandSurface
 import com.ewout.recepten.ui.theme.BrandSurfaceMuted
 import com.ewout.recepten.ui.theme.TextPrimary
@@ -70,8 +68,7 @@ import com.ewout.recepten.ui.theme.TextSecondary
 @Composable
 fun RecipeListScreen(
     viewModel: RecipeListViewModel,
-    onRecipeClick: (String) -> Unit,
-    onAddClick: () -> Unit
+    onRecipeClick: (String) -> Unit
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
 
@@ -87,19 +84,10 @@ fun RecipeListScreen(
                     )
                 },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = BrandOrange,
+                    containerColor = BrandBlue,
                     titleContentColor = BrandSurface
                 )
             )
-        },
-        floatingActionButton = {
-            FloatingActionButton(
-                onClick = onAddClick,
-                containerColor = BrandOrange,
-                contentColor = BrandSurface
-            ) {
-                Icon(Icons.Default.Add, contentDescription = "Recept toevoegen")
-            }
         }
     ) { padding ->
         Box(
@@ -162,7 +150,7 @@ private fun SearchBar(
         colors = OutlinedTextFieldDefaults.colors(
             focusedContainerColor = BrandSurface,
             unfocusedContainerColor = BrandSurface,
-            focusedBorderColor = BrandOrange,
+            focusedBorderColor = BrandBlue,
             unfocusedBorderColor = MaterialTheme.colorScheme.outline
         ),
         modifier = Modifier
@@ -207,7 +195,7 @@ private fun CategoryFilterRow(
                 label = { Text(cat) },
                 colors = FilterChipDefaults.filterChipColors(
                     containerColor = BrandSurface,
-                    selectedContainerColor = BrandOrange,
+                    selectedContainerColor = BrandBlue,
                     labelColor = TextPrimary,
                     selectedLabelColor = BrandSurface
                 ),
@@ -215,7 +203,7 @@ private fun CategoryFilterRow(
                     enabled = true,
                     selected = isSelected,
                     borderColor = MaterialTheme.colorScheme.outline,
-                    selectedBorderColor = BrandOrange
+                    selectedBorderColor = BrandBlue
                 )
             )
         }
@@ -227,7 +215,7 @@ private fun CategoryFilterRow(
 private fun LoadingState() {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            CircularProgressIndicator(color = BrandOrange)
+            CircularProgressIndicator(color = BrandBlue)
             Spacer(Modifier.height(12.dp))
             Text(
                 "Recepten worden geladen…",
@@ -358,7 +346,7 @@ private fun RecipeCard(
                     Text(
                         text = "Match: $matchedIngredient",
                         style = MaterialTheme.typography.labelMedium,
-                        color = BrandOrange
+                        color = BrandBlue
                     )
                 }
             }
