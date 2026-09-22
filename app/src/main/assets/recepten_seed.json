@@ -222,6 +222,8 @@
       "naam": "Echte Oer-Leidse Hutspot",
       "categorie": "Aardappel",
       "porties": "4-6 personen",
+      "groepId": "hutspot-met-rookworst",
+      "versieNaam": "Oer-Leids",
       "ingredienten": [
         { "naam": "pastinaak (schoongemaakt en in blokjes)", "hoeveelheid": 1200, "eenheid": "g" },
         { "naam": "winterpeen (in blokjes)", "hoeveelheid": 600, "eenheid": "g" },
@@ -559,6 +561,112 @@
         "Schenk de gezeefde tomaten in de pan en voeg de basilicum toe. Breng aan de kook en laat 5 minuten pruttelen. Maal daarna glad in een blender of foodprocessor.",
         "Schenk de gladde saus terug in de pan en voeg de kookroom toe. Verwarm door.",
         "Schep de gaar gekookte pasta bij de saus en schep alles goed om. Serveer direct."
+      ]
+    },
+    {
+      "id": "winterse-runderstoof",
+      "naam": "Winterse runderstoof",
+      "categorie": "Aardappel",
+      "porties": "4 personen",
+      "groepId": "winterse-runderstoof",
+      "versieNaam": "Rode wijn",
+      "ingredienten": [
+        { "naam": "rundvlees (sukadelappen, riblappen of chuck)", "hoeveelheid": 1, "eenheid": "kg" },
+        { "naam": "kleine aardappelen (ongeschild)", "hoeveelheid": 800, "eenheid": "g" },
+        { "naam": "winterpeen", "hoeveelheid": 3, "eenheid": "stuk" },
+        { "naam": "grote ui", "hoeveelheid": 3, "eenheid": "stuk" },
+        { "naam": "knolselderij", "hoeveelheid": 0.5, "eenheid": "stuk" },
+        { "naam": "kastanjechampignons", "hoeveelheid": 250, "eenheid": "g" },
+        { "naam": "knoflook", "hoeveelheid": 3, "eenheid": "teen" },
+        { "naam": "tomatenpuree", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "droge rode wijn", "hoeveelheid": 500, "eenheid": "ml" },
+        { "naam": "runderbouillon", "hoeveelheid": 500, "eenheid": "ml" },
+        { "naam": "roomboter of ossewit", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "bloem", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "laurierblaadje", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "tijm", "hoeveelheid": 5, "eenheid": "takjes" },
+        { "naam": "mosterd", "hoeveelheid": 1, "eenheid": "el" },
+        { "naam": "honing", "hoeveelheid": 1, "eenheid": "tl" },
+        { "naam": "zout", "hoeveelheid": null, "eenheid": null },
+        { "naam": "zwarte peper", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Snijd het rundvlees in flinke stukken van 4-5 cm, dep ze goed droog en kruid royaal met zout en peper.",
+        "Snijd de uien grof, de winterpeen in dikke stukken en de knolselderij in blokken. Halveer de champignons eventueel. Was de aardappelen goed en laat de schil zitten: kleine aardappelen heel laten, grotere halveren.",
+        "Verhit de Dutch oven goed voor op de grootste pit en smelt de roomboter of het ossewit. Bak het vlees in meerdere porties rondom donkerbruin, zodat de stukken elkaar niet raken. Haal het vlees uit de pan.",
+        "Bak de ui, winterpeen en knolselderij 7 minuten in dezelfde pan. Voeg de knoflook en tomatenpuree toe en bak 2 minuten mee.",
+        "Strooi de bloem over de groenten, roer goed door en bak 1 minuut.",
+        "Giet de rode wijn erbij en schraap met een houten lepel alle aanbaksels van de bodem los. Laat de wijn 5 minuten zachtjes koken.",
+        "Voeg ongeveer 400 ml runderbouillon toe en doe het vlees terug in de pan. Voeg de laurier, tijm, mosterd, honing en wat extra zwarte peper toe. Het vocht moet tot ongeveer tweederde van het vlees komen; vul zo nodig aan met bouillon. Breng rustig aan de kook.",
+        "Zet het vuur heel laag en doe de deksel op de pan. Laat het vlees 1,5 uur zachtjes pruttelen: je wilt slechts af en toe een klein belletje zien, geen hard kokende stoof. Roer elke 20-30 minuten voorzichtig door en controleer of er voldoende vocht in zit.",
+        "Voeg na 1,5 uur de aardappelen en champignons toe en duw de aardappelen voorzichtig tussen het vlees en de saus. Deksel erop en nog 60-75 minuten zachtjes stoven.",
+        "Het vlees moet nu met een vork gemakkelijk uit elkaar vallen. Is de saus te dun, laat hem dan de laatste 15-20 minuten zonder deksel inkoken; is hij te dik, voeg dan een scheut bouillon toe. Proef en breng op smaak met zout, peper of nog een klein beetje honing."
+      ]
+    },
+    {
+      "id": "winterse-runderstoof-guinness",
+      "naam": "Winterse runderstoof",
+      "categorie": "Aardappel",
+      "porties": "4 personen",
+      "groepId": "winterse-runderstoof",
+      "versieNaam": "Guinness",
+      "ingredienten": [
+        { "naam": "rundvlees (sukadelappen, riblappen of chuck)", "hoeveelheid": 1, "eenheid": "kg" },
+        { "naam": "kleine aardappelen (ongeschild)", "hoeveelheid": 800, "eenheid": "g" },
+        { "naam": "winterpeen", "hoeveelheid": 3, "eenheid": "stuk" },
+        { "naam": "grote ui", "hoeveelheid": 3, "eenheid": "stuk" },
+        { "naam": "knolselderij", "hoeveelheid": 0.5, "eenheid": "stuk" },
+        { "naam": "kastanjechampignons", "hoeveelheid": 250, "eenheid": "g" },
+        { "naam": "knoflook", "hoeveelheid": 3, "eenheid": "teen" },
+        { "naam": "tomatenpuree", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "Guinness Draught", "hoeveelheid": 440, "eenheid": "ml" },
+        { "naam": "runderbouillon", "hoeveelheid": 400, "eenheid": "ml" },
+        { "naam": "roomboter of ossewit", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "bloem", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "laurierblaadje", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "tijm", "hoeveelheid": 5, "eenheid": "takjes" },
+        { "naam": "mosterd", "hoeveelheid": 1, "eenheid": "el" },
+        { "naam": "honing", "hoeveelheid": 2, "eenheid": "tl" },
+        { "naam": "zout", "hoeveelheid": null, "eenheid": null },
+        { "naam": "zwarte peper", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Snijd het rundvlees in stukken van 4-5 cm, dep ze goed droog en kruid met zout en peper.",
+        "Snijd de uien, winterpeen en knolselderij grof. Was de aardappelen goed en laat de schil zitten.",
+        "Verhit de Dutch oven goed voor op de grootste pit en smelt de roomboter of het ossewit. Bak het vlees in porties rondom donkerbruin en haal het uit de pan.",
+        "Bak de ui, winterpeen en knolselderij 7 minuten. Voeg de knoflook en tomatenpuree toe en bak 2 minuten mee.",
+        "Strooi de bloem over de groenten, roer goed door en bak 1 minuut.",
+        "Giet ongeveer 330 ml Guinness erbij en schraap alle aanbaksels van de bodem los. Laat 5 minuten zachtjes koken.",
+        "Voeg 400 ml runderbouillon toe en doe het vlees terug in de pan. Voeg de laurier, tijm, mosterd, honing en zwarte peper toe, roer goed en breng rustig aan de kook.",
+        "Zet het vuur laag en doe de deksel op de pan. Laat 1,5 uur heel zachtjes pruttelen en roer elke 20-30 minuten voorzichtig door.",
+        "Voeg na 1,5 uur de aardappelen, de champignons en de resterende ongeveer 110 ml Guinness toe. Deksel erop en nog 60-75 minuten zachtjes stoven.",
+        "Controleer het vlees: het moet echt boterzacht zijn. Laat de saus eventueel de laatste 15-20 minuten zonder deksel inkoken. Proef en breng op smaak met zout, peper of nog een klein beetje honing."
+      ]
+    },
+    {
+      "id": "hutspot-met-rookworst",
+      "naam": "Hutspot met rookworst",
+      "categorie": "Aardappel",
+      "porties": "4 personen",
+      "groepId": "hutspot-met-rookworst",
+      "versieNaam": "Met rookworst",
+      "ingredienten": [
+        { "naam": "kruimige aardappelen", "hoeveelheid": 1, "eenheid": "kg" },
+        { "naam": "wortel", "hoeveelheid": 600, "eenheid": "g" },
+        { "naam": "ui", "hoeveelheid": 400, "eenheid": "g" },
+        { "naam": "Veluwse rookworst (Albert Heijn)", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "ongezouten roomboter", "hoeveelheid": 75, "eenheid": "g" },
+        { "naam": "melk", "hoeveelheid": 100, "eenheid": "ml" },
+        { "naam": "nootmuskaat", "hoeveelheid": 0.5, "eenheid": "tl" }
+      ],
+      "bereidingswijze": [
+        "Schil de aardappelen, snijd ze in gelijke stukken en kook ze in ongeveer 24 minuten gaar in licht gezouten water.",
+        "Snijd de wortels in stukjes en kook ze in ongeveer 10 minuten gaar.",
+        "Snipper de uien en bak ze op middellaag vuur rustig bruin in een koekenpan.",
+        "Verwarm de rookworst ongeveer 20 minuten in heet water tegen de kook aan.",
+        "Giet de aardappelen en wortel af en stamp ze samen fijn. Voeg de melk en de roomboter toe en stamp door tot een smeuïge stamppot.",
+        "Schep de gebakken ui erdoor en breng op smaak met de nootmuskaat, peper en zout.",
+        "Snijd de rookworst in plakken en serveer die op of naast de hutspot."
       ]
     }
   ]
