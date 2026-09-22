@@ -568,7 +568,7 @@
       "naam": "Winterse runderstoof",
       "categorie": "Aardappel",
       "porties": "4 personen",
-      "groepId": "winterse-runderstoof",
+      "groepId": "winterse-runderstoof-guinness",
       "versieNaam": "Rode wijn",
       "ingredienten": [
         { "naam": "rundvlees (sukadelappen, riblappen of chuck)", "hoeveelheid": 1, "eenheid": "kg" },
@@ -608,7 +608,7 @@
       "naam": "Winterse runderstoof",
       "categorie": "Aardappel",
       "porties": "4 personen",
-      "groepId": "winterse-runderstoof",
+      "groepId": "winterse-runderstoof-guinness",
       "versieNaam": "Guinness",
       "ingredienten": [
         { "naam": "rundvlees (sukadelappen, riblappen of chuck)", "hoeveelheid": 1, "eenheid": "kg" },
