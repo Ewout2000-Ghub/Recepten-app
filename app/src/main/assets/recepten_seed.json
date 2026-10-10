@@ -5,6 +5,7 @@
       "naam": "Tikka massala curry",
       "categorie": "Rijst",
       "porties": "4 personen",
+      "kip": true,
       "ingredienten": [
         { "naam": "kipdijfilet", "hoeveelheid": 400, "eenheid": "g" },
         { "naam": "aubergine", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -36,6 +37,7 @@
       "porties": "4 personen",
       "groepId": "pasta-bolognese",
       "versieNaam": "Origineel",
+      "rund": true,
       "ingredienten": [
         { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
         { "naam": "rode paprika", "hoeveelheid": 2, "eenheid": "stuk" },
@@ -60,6 +62,7 @@
       "porties": "4 personen",
       "groepId": "pasta-bolognese",
       "versieNaam": "Verse groenten & wijn",
+      "rund": true,
       "ingredienten": [
         { "naam": "rundergehakt", "hoeveelheid": 500, "eenheid": "g" },
         { "naam": "paprika", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -90,6 +93,7 @@
       "naam": "Lasagne",
       "categorie": "Pasta",
       "porties": "4 personen",
+      "rund": true,
       "ingredienten": [
         { "naam": "paprika", "hoeveelheid": 2, "eenheid": "stuk" },
         { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -111,6 +115,7 @@
       "naam": "Macaroni",
       "categorie": "Pasta",
       "porties": "4 personen",
+      "rund": true,
       "ingredienten": [
         { "naam": "gehakt", "hoeveelheid": null, "eenheid": null },
         { "naam": "macaroni", "hoeveelheid": null, "eenheid": null },
@@ -132,6 +137,7 @@
       "naam": "Pasta pesto",
       "categorie": "Pasta",
       "porties": "4 personen",
+      "kip": true,
       "ingredienten": [
         { "naam": "pasta", "hoeveelheid": null, "eenheid": null },
         { "naam": "pesto", "hoeveelheid": null, "eenheid": null },
@@ -149,6 +155,7 @@
       "naam": "Bami met mienestjes",
       "categorie": "Anders",
       "porties": "4 personen",
+      "kip": true,
       "ingredienten": [
         { "naam": "mienestjes", "hoeveelheid": 300, "eenheid": "g" },
         { "naam": "bamigroentepakket", "hoeveelheid": 900, "eenheid": "g" },
@@ -164,6 +171,7 @@
       "naam": "Gnocchi ovenschotel",
       "categorie": "Ovenschotel",
       "porties": "4 personen",
+      "rund": true,
       "ingredienten": [
         { "naam": "courgette", "hoeveelheid": 1, "eenheid": "stuk" },
         { "naam": "aubergine", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -192,6 +200,7 @@
       "naam": "Broccoli ovenschotel",
       "categorie": "Ovenschotel",
       "porties": "4 personen",
+      "rund": true,
       "ingredienten": [
         { "naam": "broccoli (roosjes)", "hoeveelheid": 500, "eenheid": "g" },
         { "naam": "aardappelschijfjes", "hoeveelheid": 600, "eenheid": "g" },
@@ -224,6 +233,7 @@
       "porties": "4-6 personen",
       "groepId": "hutspot-met-rookworst",
       "versieNaam": "Oer-Leids",
+      "rund": true,
       "ingredienten": [
         { "naam": "pastinaak (schoongemaakt en in blokjes)", "hoeveelheid": 1200, "eenheid": "g" },
         { "naam": "winterpeen (in blokjes)", "hoeveelheid": 600, "eenheid": "g" },
@@ -251,6 +261,8 @@
       "naam": "Snelle Spaanse tomatenstoof met gehaktballetjes",
       "categorie": "Anders",
       "porties": "4 personen",
+      "rund": true,
+      "varken": true,
       "ingredienten": [
         { "naam": "half-om-halfgehakt (mag ook rundergehakt zijn)", "hoeveelheid": 500, "eenheid": "g" },
         { "naam": "Al-Andalus kruiden (Euroma)", "hoeveelheid": 4, "eenheid": "tl" },
@@ -277,6 +289,8 @@
       "naam": "Orzo met garnalen",
       "categorie": "Pasta",
       "porties": "4 personen",
+      "vis": true,
+      "kip": true,
       "ingredienten": [
         { "naam": "kipfilet", "hoeveelheid": null, "eenheid": null },
         { "naam": "ui", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -304,6 +318,7 @@
       "naam": "Quiche met prei en spek",
       "categorie": "Anders",
       "porties": "4 personen",
+      "varken": true,
       "ingredienten": [
         { "naam": "plakjes diepvries deeg voor hartige taart", "hoeveelheid": 7, "eenheid": "stuk" },
         { "naam": "prei", "hoeveelheid": 2, "eenheid": "stuk" },
@@ -325,6 +340,7 @@
       "naam": "Zuurkoolstamppot met rookworst",
       "categorie": "Aardappel",
       "porties": "4 personen",
+      "varken": true,
       "ingredienten": [
         { "naam": "zuurkool", "hoeveelheid": null, "eenheid": null },
         { "naam": "kruimige aardappelen", "hoeveelheid": null, "eenheid": null },
@@ -345,6 +361,7 @@
       "naam": "Gele rijst met chorizo",
       "categorie": "Rijst",
       "porties": "4 personen",
+      "varken": true,
       "ingredienten": [
         { "naam": "chorizo", "hoeveelheid": 250, "eenheid": "g" },
         { "naam": "ui", "hoeveelheid": 2, "eenheid": "stuk" },
@@ -448,6 +465,7 @@
       "naam": "Chili con carne",
       "categorie": "Rijst",
       "porties": "4 personen",
+      "rund": true,
       "ingredienten": [
         { "naam": "grote ui", "hoeveelheid": 1, "eenheid": "stuk" },
         { "naam": "knoflook", "hoeveelheid": 2, "eenheid": "teen" },
@@ -479,6 +497,7 @@
       "naam": "Ovenschotel met bloemkool",
       "categorie": "Ovenschotel",
       "porties": "4 personen",
+      "rund": true,
       "ingredienten": [
         { "naam": "aardappels (iets kruimig)", "hoeveelheid": 1, "eenheid": "kg" },
         { "naam": "bloemkool (in kleine roosjes)", "hoeveelheid": 500, "eenheid": "g" },
@@ -570,6 +589,7 @@
       "porties": "4 personen",
       "groepId": "winterse-runderstoof-guinness",
       "versieNaam": "Rode wijn",
+      "rund": true,
       "ingredienten": [
         { "naam": "rundvlees (sukadelappen, riblappen of chuck)", "hoeveelheid": 1, "eenheid": "kg" },
         { "naam": "kleine aardappelen (ongeschild)", "hoeveelheid": 800, "eenheid": "g" },
@@ -610,6 +630,7 @@
       "porties": "4 personen",
       "groepId": "winterse-runderstoof-guinness",
       "versieNaam": "Guinness",
+      "rund": true,
       "ingredienten": [
         { "naam": "rundvlees (sukadelappen, riblappen of chuck)", "hoeveelheid": 1, "eenheid": "kg" },
         { "naam": "kleine aardappelen (ongeschild)", "hoeveelheid": 800, "eenheid": "g" },
@@ -650,6 +671,7 @@
       "porties": "4 personen",
       "groepId": "hutspot-met-rookworst",
       "versieNaam": "Met rookworst",
+      "varken": true,
       "ingredienten": [
         { "naam": "kruimige aardappelen", "hoeveelheid": 1, "eenheid": "kg" },
         { "naam": "wortel", "hoeveelheid": 600, "eenheid": "g" },
@@ -667,6 +689,37 @@
         "Giet de aardappelen en wortel af en stamp ze samen fijn. Voeg de melk en de roomboter toe en stamp door tot een smeuïge stamppot.",
         "Schep de gebakken ui erdoor en breng op smaak met de nootmuskaat, peper en zout.",
         "Snijd de rookworst in plakken en serveer die op of naast de hutspot."
+      ]
+    },
+    {
+      "id": "viscurry-met-rijst-en-groente",
+      "naam": "Viscurry met rijst en groente",
+      "categorie": "Rijst",
+      "porties": "2 personen",
+      "vis": true,
+      "ingredienten": [
+        { "naam": "rijst", "hoeveelheid": 175, "eenheid": "g" },
+        { "naam": "witvisfilet (tilapia)", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "kokosmelk", "hoeveelheid": 200, "eenheid": "ml" },
+        { "naam": "currypasta", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "paprika", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "wortel", "hoeveelheid": 150, "eenheid": "g" },
+        { "naam": "ui", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "knoflook", "hoeveelheid": 2, "eenheid": "teen" },
+        { "naam": "verse gember", "hoeveelheid": 1.5, "eenheid": "cm" },
+        { "naam": "bruine basterdsuiker", "hoeveelheid": 1, "eenheid": "el" },
+        { "naam": "olie", "hoeveelheid": null, "eenheid": null },
+        { "naam": "verse koriander", "hoeveelheid": null, "eenheid": null },
+        { "naam": "limoensap", "hoeveelheid": null, "eenheid": null },
+        { "naam": "zout en peper", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Kook de rijst volgens de instructies op de verpakking.",
+        "Snipper de ui en snijd de knoflook fijn. Maak de gember schoon en snijd hem fijn. Snijd de paprika in blokjes en de wortel in stukjes.",
+        "Giet een scheutje olie in een hapjespan en fruit de ui, knoflook en gember aan. Bak de paprika en wortel mee.",
+        "Voeg na ongeveer 5 minuten de kokosmelk, currypasta en basterdsuiker toe.",
+        "Dep de vis droog en breng op smaak met zout en peper. Snijd de vis in stukjes en bak hem 6-8 minuten mee.",
+        "Serveer de viscurry met de rijst, wat verse koriander en een beetje limoensap."
       ]
     }
   ]
