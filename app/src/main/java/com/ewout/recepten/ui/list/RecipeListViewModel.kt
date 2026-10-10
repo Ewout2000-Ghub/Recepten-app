@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 
-enum class DietFilter { NONE, VEGA, VEGAN }
+enum class DietFilter { NONE, VEGA, VEGAN, RUND, VIS, KIP, VARKEN }
 
 data class RecipeListUiState(
     val isLoading: Boolean = true,
@@ -75,6 +75,10 @@ class RecipeListViewModel(
                 DietFilter.NONE -> true
                 DietFilter.VEGA -> recipe.vega
                 DietFilter.VEGAN -> recipe.vegan
+                DietFilter.RUND -> recipe.rund
+                DietFilter.VIS -> recipe.vis
+                DietFilter.KIP -> recipe.kip
+                DietFilter.VARKEN -> recipe.varken
             }
             matchesCategory && matchesQuery && matchesDiet
         }

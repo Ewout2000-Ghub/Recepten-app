@@ -45,13 +45,17 @@ compileerbaar aanleveren; de gebruiker test op het toestel.
 | `versieNaam` | String? | korte versienaam, bv. `"Origineel"` |
 | `vega` | Boolean | vegetarisch (geen vlees/vis); default `false`. Zet bij vegan óók `true` |
 | `vegan` | Boolean | veganistisch (geen dierlijke producten); default `false` |
+| `rund` / `vis` / `kip` / `varken` | Boolean | vleessoort-vlaggen; default `false`. Meerdere tegelijk mag (half-om-halfgehakt = `rund` + `varken`) |
 
-`vega`/`vegan` voeden de dieet-filterknoppen ("Vega"/"Vegan") bovenaan de lijst
-([RecipeListViewModel.kt](app/src/main/java/com/ewout/recepten/ui/list/RecipeListViewModel.kt),
-`DietFilter`). Het zijn **geen** categorieën — recepten blijven in hun eigen
-categorie; het filter staat standaard uit. Opgeslagen als Room-kolommen (DB v3);
-bij een nieuw dieet-veld een migratie toevoegen zoals `MIGRATION_2_3` in
-[RecipeDatabase.kt](app/src/main/java/com/ewout/recepten/data/local/RecipeDatabase.kt).
+Deze vlaggen voeden de filterknoppen bovenaan de lijst — "Vega", "Vegan", "Rund",
+"Vis", "Kip", "Varken" (zie `DietFilter` in
+[RecipeListViewModel.kt](app/src/main/java/com/ewout/recepten/ui/list/RecipeListViewModel.kt)).
+Het filter is **enkelvoudig**: één knop tegelijk, nogmaals tikken zet hem uit, en
+standaard staat hij uit. Het zijn **geen** categorieën — recepten blijven in hun
+eigen categorie. Opgeslagen als Room-kolommen (DB v4); komt er een vlag bij, voeg
+dan een migratie toe zoals `MIGRATION_3_4` in
+[RecipeDatabase.kt](app/src/main/java/com/ewout/recepten/data/local/RecipeDatabase.kt)
+én een chip in `DietFilterRow`.
 
 `Ingredient` ([Ingredient.kt](app/src/main/java/com/ewout/recepten/data/Ingredient.kt)):
 `naam: String`, `hoeveelheid: Double? = null`, `eenheid: String? = null`.
@@ -106,6 +110,10 @@ voegen. Werk dan dit stappenplan af:
    - `vega`/`vegan`: bepaal uit de ingrediënten. Vlees/vis → beide weglaten
      (default false). Vegetarisch (met kaas/ei/honing) → `"vega": true`. Zonder
      enig dierlijk product → `"vega": true` én `"vegan": true`.
+   - `rund`/`vis`/`kip`/`varken`: zet elke vlag die van toepassing is (meerdere
+     mag). `vis` dekt ook schaal- en schelpdieren, `kip` dekt gevogelte. Onbepaald
+     "gehakt" → `rund`, tenzij de bron iets anders zegt. Elk recept hoort óf een
+     vleesvlag óf `vega` te hebben.
 3. **Verhoog `SEED_VERSION` met 1** in
    [SeedVersion.kt](app/src/main/java/com/ewout/recepten/data/seed/SeedVersion.kt).
    **Verplicht** — zonder ophoging leest de app de nieuwe JSON niet in.
@@ -137,7 +145,7 @@ app/src/main/
     │   ├── local/   (Database, DAO, Entity, Converters)
     │   └── seed/    (SeedLoader, SeedVersion)
     └── ui/
-        ├── theme/, list/, detail/, edit/, Format.kt
+        ├── theme/, list/, detail/, Format.kt
 ```
 
 ## Conventies

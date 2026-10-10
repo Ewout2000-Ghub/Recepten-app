@@ -23,7 +23,15 @@ data class Recipe(
     /** Vegetarisch (geen vlees/vis). Vegan-recepten zijn ook vega. */
     val vega: Boolean = false,
     /** Veganistisch (geen dierlijke producten). */
-    val vegan: Boolean = false
+    val vegan: Boolean = false,
+    /** Bevat rundvlees. */
+    val rund: Boolean = false,
+    /** Bevat vis of schaal-/schelpdieren. */
+    val vis: Boolean = false,
+    /** Bevat kip of ander gevogelte. */
+    val kip: Boolean = false,
+    /** Bevat varkensvlees. */
+    val varken: Boolean = false
 ) {
     /** De sleutel waarop versies van hetzelfde gerecht worden gegroepeerd. */
     val groepSleutel: String get() = groepId ?: id

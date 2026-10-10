@@ -171,12 +171,17 @@ private fun DietFilterRow(
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .horizontalScroll(rememberScrollState())
             .padding(horizontal = 16.dp, vertical = 4.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         DietChip("Vega", selected == DietFilter.VEGA) { onToggle(DietFilter.VEGA) }
         DietChip("Vegan", selected == DietFilter.VEGAN) { onToggle(DietFilter.VEGAN) }
+        DietChip("Rund", selected == DietFilter.RUND) { onToggle(DietFilter.RUND) }
+        DietChip("Vis", selected == DietFilter.VIS) { onToggle(DietFilter.VIS) }
+        DietChip("Kip", selected == DietFilter.KIP) { onToggle(DietFilter.KIP) }
+        DietChip("Varken", selected == DietFilter.VARKEN) { onToggle(DietFilter.VARKEN) }
     }
 }
 
