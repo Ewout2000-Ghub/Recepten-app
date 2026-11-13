@@ -37,7 +37,7 @@ compileerbaar aanleveren; de gebruiker test op het toestel.
 | `id` | String | uniek, kebab-case |
 | `naam` | String | |
 | `categorie` | String | zie categorieën |
-| `porties` | String? | bv. `"4 personen"`; eerste getal = basis voor portie-schalen (default 4) |
+| `porties` | String? | bv. `"4 personen"`; eerste getal = basis voor portie-schalen (default 4). De detailpagina opent altijd op 4 personen en schaalt vanaf deze basis |
 | `ingredienten` | List\<Ingredient\> | |
 | `bereidingswijze` | List\<String\> | één stap per element, mag leeg zijn |
 | `bron` | Bron | `SEED` of `USER` — bij JSON weglaten, SeedLoader zet 'm op `SEED` |
@@ -58,7 +58,9 @@ dan een migratie toe zoals `MIGRATION_3_4` in
 én een chip in `DietFilterRow`.
 
 `Ingredient` ([Ingredient.kt](app/src/main/java/com/ewout/recepten/data/Ingredient.kt)):
-`naam: String`, `hoeveelheid: Double? = null`, `eenheid: String? = null`.
+`naam: String`, `hoeveelheid: Double? = null`, `eenheid: String? = null`,
+`optioneel: Boolean = false`. Met `"optioneel": true` komt het ingrediënt onder een
+apart kopje "Optioneel" op de detailpagina (bij JSON weglaten als het niet optioneel is).
 `hoeveelheid: null` = "naar smaak" → UI toont alleen de naam. `eenheid` is vrije
 tekst (`g`, `kg`, `ml`, `l`, `stuk`, `teen`, `el`, `tl`, `takjes`, `bol`, …).
 
