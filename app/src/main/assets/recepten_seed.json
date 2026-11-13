@@ -756,6 +756,66 @@
         "Verdeel de aardappelpuree erover. Roer er eventueel één of twee lepels crème fraîche door, of spuit de bovenste laag met een spuitzak in toefjes.",
         "Zet de ovenschotel 30 minuten in de oven."
       ]
+    },
+    {
+      "id": "linzencurry-met-pompoen",
+      "naam": "Linzencurry met pompoen",
+      "categorie": "Anders",
+      "porties": "4 personen",
+      "groepId": "linzencurry-met-pompoen",
+      "versieNaam": "Origineel",
+      "vega": true,
+      "vegan": true,
+      "ingredienten": [
+        { "naam": "flespompoen", "hoeveelheid": 1, "eenheid": "kg" },
+        { "naam": "verse gember", "hoeveelheid": 30, "eenheid": "g" },
+        { "naam": "linzen in blik", "hoeveelheid": 400, "eenheid": "g" },
+        { "naam": "garam masala", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "chilivlokken", "hoeveelheid": 0.5, "eenheid": "tl" },
+        { "naam": "tomatenpuree", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "water", "hoeveelheid": 500, "eenheid": "ml" },
+        { "naam": "ui", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "bosui", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "olie", "hoeveelheid": null, "eenheid": null },
+        { "naam": "peper en zout", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Schil de pompoen en snijd in stukken van 2 cm. Schil en rasp de gember. Spoel de linzen onder koud stromend water en laat uitlekken in een vergiet.",
+        "Verhit een scheutje olie in een grote hapjespan en fruit de gember, garam masala, chilivlokken en tomatenpuree 3 minuten.",
+        "Voeg de pompoen, de linzen en het water toe en stoof 15 minuten. Breng op smaak met peper en eventueel zout. Voeg extra water toe als de curry te droog wordt.",
+        "Snijd ondertussen de uien in dunne ringen. Verhit wat olie in een koekenpan en bak de ui in ca. 5 minuten op middelhoog vuur goudbruin en krokant.",
+        "Snijd de bosui in dunne ringen. Verdeel de curry over de borden en serveer met de gebakken ui en bosui erover."
+      ]
+    },
+    {
+      "id": "linzencurry-met-pompoen-en-kip",
+      "naam": "Linzencurry met pompoen en kip",
+      "categorie": "Anders",
+      "porties": "4 personen",
+      "groepId": "linzencurry-met-pompoen",
+      "versieNaam": "Met kip",
+      "kip": true,
+      "ingredienten": [
+        { "naam": "kipdijfilet", "hoeveelheid": 400, "eenheid": "g" },
+        { "naam": "flespompoen", "hoeveelheid": 1, "eenheid": "kg" },
+        { "naam": "verse gember", "hoeveelheid": 30, "eenheid": "g" },
+        { "naam": "linzen in blik", "hoeveelheid": 400, "eenheid": "g" },
+        { "naam": "garam masala", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "chilivlokken", "hoeveelheid": 0.5, "eenheid": "tl" },
+        { "naam": "tomatenpuree", "hoeveelheid": 2, "eenheid": "el" },
+        { "naam": "water", "hoeveelheid": 500, "eenheid": "ml" },
+        { "naam": "ui", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "bosui", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "olie", "hoeveelheid": null, "eenheid": null },
+        { "naam": "peper en zout", "hoeveelheid": null, "eenheid": null }
+      ],
+      "bereidingswijze": [
+        "Schil de pompoen en snijd in stukken van 2 cm. Schil en rasp de gember. Spoel de linzen onder koud stromend water en laat uitlekken in een vergiet. Snijd de kip in blokjes en bestrooi met peper en zout.",
+        "Verhit een scheutje olie in een grote hapjespan en bak de kip in ca. 5 minuten rondom bruin. Voeg de gember, garam masala, chilivlokken en tomatenpuree toe en fruit 3 minuten mee.",
+        "Voeg de pompoen, de linzen en het water toe en stoof 15 minuten, tot de pompoen zacht en de kip gaar is. Breng op smaak met peper en eventueel zout. Voeg extra water toe als de curry te droog wordt.",
+        "Snijd ondertussen de uien in dunne ringen. Verhit wat olie in een koekenpan en bak de ui in ca. 5 minuten op middelhoog vuur goudbruin en krokant.",
+        "Snijd de bosui in dunne ringen. Verdeel de curry over de borden en serveer met de gebakken ui en bosui erover."
+      ]
     }
   ]
 }
