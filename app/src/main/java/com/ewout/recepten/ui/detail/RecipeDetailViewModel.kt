@@ -35,7 +35,10 @@ data class RecipeDetailUiState(
         get() = personen.toDouble() / basisPersonen.toDouble()
 }
 
-/** Recepten zonder expliciete porties gaan uit van 4 personen. */
+/**
+ * Elk recept opent standaard op 4 personen. Recepten zonder expliciete porties
+ * gaan bovendien uit van 4 personen als basis voor het schalen.
+ */
 const val STANDAARD_PERSONEN = 4
 
 @OptIn(ExperimentalCoroutinesApi::class)
@@ -46,7 +49,7 @@ class RecipeDetailViewModel(
 
     // null = nog niet gekozen → toon de oorspronkelijk geopende versie.
     private val gekozenVersieId = MutableStateFlow<String?>(null)
-    // null = nog niet aangepast door de gebruiker → volg de basis van het recept.
+    // null = nog niet aangepast door de gebruiker → STANDAARD_PERSONEN.
     private val gekozenPersonen = MutableStateFlow<Int?>(null)
     private val afgevinkteIngredienten = MutableStateFlow<Set<Int>>(emptySet())
     private val afgevinkteStappen = MutableStateFlow<Set<Int>>(emptySet())
@@ -79,7 +82,8 @@ class RecipeDetailViewModel(
             versies = groepVersies.map { VersieOptie(it.id, it.versieNaam ?: it.naam) },
             geselecteerdeVersieId = huidig?.id,
             basisPersonen = basis,
-            personen = personen ?: basis,
+            // Standaard altijd 4 personen; hoeveelheden worden vanaf de basis geschaald.
+            personen = personen ?: STANDAARD_PERSONEN,
             afgevinkteIngredienten = ingChecks,
             afgevinkteStappen = stapChecks
         )

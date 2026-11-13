@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -158,13 +159,26 @@ private fun DetailContent(
         item {
             SectionTitle("Ingrediënten")
         }
-        itemsIndexed(recipe.ingredienten) { index, ingredient ->
+        // Index blijft de positie in de volledige lijst, zodat vinkjes kloppen.
+        val (optioneel, verplicht) = recipe.ingredienten.withIndex().partition { it.value.optioneel }
+        items(verplicht, key = { it.index }) { (index, ingredient) ->
             IngredientRow(
                 ingredient = ingredient,
                 factor = state.schaalFactor,
                 checked = index in state.afgevinkteIngredienten,
                 onToggle = { onToggleIngredient(index) }
             )
+        }
+        if (optioneel.isNotEmpty()) {
+            item { SubsectionTitle("Optioneel") }
+            items(optioneel, key = { it.index }) { (index, ingredient) ->
+                IngredientRow(
+                    ingredient = ingredient,
+                    factor = state.schaalFactor,
+                    checked = index in state.afgevinkteIngredienten,
+                    onToggle = { onToggleIngredient(index) }
+                )
+            }
         }
         item {
             Spacer(Modifier.height(4.dp))
@@ -343,6 +357,17 @@ private fun SectionTitle(text: String) {
         color = TextPrimary,
         fontWeight = FontWeight.SemiBold,
         modifier = Modifier.padding(top = 4.dp, bottom = 4.dp)
+    )
+}
+
+@Composable
+private fun SubsectionTitle(text: String) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.titleMedium,
+        color = TextSecondary,
+        fontWeight = FontWeight.SemiBold,
+        modifier = Modifier.padding(top = 8.dp)
     )
 }
 
