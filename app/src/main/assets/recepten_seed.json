@@ -342,12 +342,12 @@
       "porties": "4 personen",
       "varken": true,
       "ingredienten": [
-        { "naam": "zuurkool", "hoeveelheid": null, "eenheid": null },
-        { "naam": "kruimige aardappelen", "hoeveelheid": null, "eenheid": null },
-        { "naam": "melk", "hoeveelheid": null, "eenheid": null },
-        { "naam": "roomboter", "hoeveelheid": null, "eenheid": null },
-        { "naam": "mosterd", "hoeveelheid": null, "eenheid": null },
-        { "naam": "rookworst", "hoeveelheid": null, "eenheid": null }
+        { "naam": "zuurkool", "hoeveelheid": 520, "eenheid": "g" },
+        { "naam": "kruimige aardappelen", "hoeveelheid": 1, "eenheid": "kg" },
+        { "naam": "volle melk", "hoeveelheid": 150, "eenheid": "ml" },
+        { "naam": "ongezouten roomboter", "hoeveelheid": 40, "eenheid": "g" },
+        { "naam": "grove mosterd", "hoeveelheid": 1, "eenheid": "el" },
+        { "naam": "Gelderse rookworst", "hoeveelheid": 375, "eenheid": "g" }
       ],
       "bereidingswijze": [
         "Laat de zuurkool uitlekken. Schil en snijd de aardappelen in gelijke stukken en kook in 20 min. gaar. Voeg de laatste 10 min. de zuurkool toe.",
