@@ -9,7 +9,7 @@
       "ingredienten": [
         { "naam": "kipdijfilet", "hoeveelheid": 400, "eenheid": "g" },
         { "naam": "aubergine", "hoeveelheid": 1, "eenheid": "stuk" },
-        { "naam": "kokosmelk", "hoeveelheid": null, "eenheid": null },
+        { "naam": "kokosmelk", "hoeveelheid": 400, "eenheid": "ml" },
         { "naam": "rode paprika", "hoeveelheid": 2, "eenheid": "stuk" },
         { "naam": "normale ui", "hoeveelheid": 2, "eenheid": "stuk" },
         { "naam": "rode ui", "hoeveelheid": 1, "eenheid": "stuk" },
@@ -422,12 +422,12 @@
         { "naam": "ui", "hoeveelheid": 1, "eenheid": "stuk" },
         { "naam": "rode paprika", "hoeveelheid": 1, "eenheid": "stuk" },
         { "naam": "zwarte olijven", "hoeveelheid": 40, "eenheid": "g" },
-        { "naam": "bladpeterselie", "hoeveelheid": 10, "eenheid": "g" },
         { "naam": "feta", "hoeveelheid": 100, "eenheid": "g" },
         { "naam": "Provençaalse kruiden", "hoeveelheid": 1, "eenheid": "tl" },
         { "naam": "tomatenpassata", "hoeveelheid": 350, "eenheid": "ml" },
         { "naam": "olijfolie", "hoeveelheid": 2, "eenheid": "el" },
-        { "naam": "peper en zout", "hoeveelheid": null, "eenheid": null }
+        { "naam": "peper en zout", "hoeveelheid": null, "eenheid": null },
+        { "naam": "bladpeterselie", "hoeveelheid": 10, "eenheid": "g", "optioneel": true }
       ],
       "bereidingswijze": [
         "Breng per persoon 150 ml licht gezouten water aan de kook, voeg de rijst toe, deksel erop, zet het vuur laag en kook 10-13 minuten zachtjes tot het water is opgenomen. Maak de rijst los met een vork.",
@@ -541,7 +541,6 @@
         { "naam": "knoflook", "hoeveelheid": 1, "eenheid": "teen" },
         { "naam": "verse basilicum", "hoeveelheid": null, "eenheid": null },
         { "naam": "olie", "hoeveelheid": 2, "eenheid": "el" },
-        { "naam": "droge witte wijn", "hoeveelheid": null, "eenheid": null },
         { "naam": "warme groentebouillon", "hoeveelheid": 300, "eenheid": "ml" },
         { "naam": "cherrytomaatjes aan tak", "hoeveelheid": 250, "eenheid": "g" },
         { "naam": "Parmezaanse kaas", "hoeveelheid": 50, "eenheid": "g" },
@@ -550,7 +549,7 @@
       ],
       "bereidingswijze": [
         "Verwarm de oven op 200 graden. Snipper de ui en knoflook en fruit deze aan in een pan met een eetlepel olie. Voeg de risottorijst toe en bak 3 minuten mee.",
-        "Blus af met witte wijn en wacht tot die is opgenomen. Voeg de tomatensaus en een soeplepel bouillon toe en roer af en toe door. Rooster ondertussen de cherrytomaatjes (besprenkeld met olie, zout en peper) 15 minuten in de oven of 10 minuten in de airfryer.",
+        "Voeg de tomatensaus en een soeplepel bouillon toe en roer af en toe door. Rooster ondertussen de cherrytomaatjes (besprenkeld met olie, zout en peper) 15 minuten in de oven of 10 minuten in de airfryer.",
         "Voeg stap voor stap de resterende bouillon toe. Kook in totaal ongeveer 25 minuten en proef regelmatig; de rijst moet zacht zijn met een kleine bite.",
         "Rasp de Parmezaanse kaas en roer erdoor. Voeg enkele basilicumblaadjes toe. Schep op borden, verdeel de burrata erover, leg de geroosterde tomaatjes erbij en garneer met basilicum."
       ]
@@ -720,6 +719,42 @@
         "Voeg na ongeveer 5 minuten de kokosmelk, currypasta en basterdsuiker toe.",
         "Dep de vis droog en breng op smaak met zout en peper. Snijd de vis in stukjes en bak hem 6-8 minuten mee.",
         "Serveer de viscurry met de rijst, wat verse koriander en een beetje limoensap."
+      ]
+    },
+    {
+      "id": "shepherds-pie",
+      "naam": "Shepherd's pie",
+      "categorie": "Aardappel",
+      "porties": "4 personen",
+      "rund": true,
+      "ingredienten": [
+        { "naam": "kruimige aardappels", "hoeveelheid": 1, "eenheid": "kg" },
+        { "naam": "ui", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "knoflook", "hoeveelheid": 2, "eenheid": "teen" },
+        { "naam": "flinke winterpeen", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "prei", "hoeveelheid": 2, "eenheid": "stuk" },
+        { "naam": "rundergehakt", "hoeveelheid": 500, "eenheid": "g" },
+        { "naam": "groentebouillon", "hoeveelheid": 250, "eenheid": "ml" },
+        { "naam": "tomatenpuree", "hoeveelheid": 70, "eenheid": "g" },
+        { "naam": "worcestershiresaus", "hoeveelheid": 3, "eenheid": "el" },
+        { "naam": "verse rozemarijn", "hoeveelheid": 1, "eenheid": "takje" },
+        { "naam": "tijm (gedroogd)", "hoeveelheid": 1, "eenheid": "el" },
+        { "naam": "laurierblaadje", "hoeveelheid": 1, "eenheid": "stuk" },
+        { "naam": "olie", "hoeveelheid": null, "eenheid": null },
+        { "naam": "peper en zout", "hoeveelheid": null, "eenheid": null },
+        { "naam": "crème fraîche", "hoeveelheid": null, "eenheid": null, "optioneel": true }
+      ],
+      "bereidingswijze": [
+        "Verwarm de oven voor op 200 graden boven- en onderwarmte.",
+        "Schil de aardappels, snijd ze in gelijke stukken en kook ze in water met een snufje zout gaar. Giet af en stamp ze tot een gladde puree.",
+        "Snipper de uien en snijd de knoflook fijn. Schil de winterpeen en snijd in blokjes. Snijd de prei in dunne ringen.",
+        "Verhit een beetje olie in een ruime koekenpan en fruit de ui en knoflook tot ze glazig worden. Voeg de wortel toe en bak even mee.",
+        "Voeg het gehakt toe, kruid met peper en zout en bak rul.",
+        "Voeg de prei toe en bak tot alle groenten iets zachter zijn.",
+        "Voeg de bouillon, tomatenpuree, worcestershiresaus, rozemarijn, tijm en het laurierblaadje toe. Laat rustig pruttelen tot de saus is ingekookt en breng eventueel verder op smaak met peper en zout.",
+        "Verdeel het gehaktmengsel over een ruime ovenschaal.",
+        "Verdeel de aardappelpuree erover. Roer er eventueel één of twee lepels crème fraîche door, of spuit de bovenste laag met een spuitzak in toefjes.",
+        "Zet de ovenschotel 30 minuten in de oven."
       ]
     }
   ]
